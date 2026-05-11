@@ -1,0 +1,100 @@
+@extends('dashboard.layouts.backend', ['title' => 'اضافة مستخدم'])
+
+@section('contant')
+    <div class="main-side">
+        <div class="d-flex align-items-center justify-content-between mb-4">
+            <div class="main-title">
+                <div class="small">الرئيسية</div>/
+                <div class="small">المستخدمون</div>/
+                <div class="large">اضافة مستخدم جديد</div>
+            </div>
+            <div class="btn-holder">
+                <a class="main-btn btn-main-color fs-13px" href="{{ route('dashboard.users.index') }}">
+                    رجوع <i class="fa-solid fa-arrow-left fs-13px"></i>
+                </a>
+            </div>
+        </div>
+
+        <x-alert-component></x-alert-component>
+
+        <form action="{{ route('dashboard.users.store') }}" method="POST" enctype="multipart/form-data">
+            @csrf
+            <div class="row g-4">
+                <div class="col-12 col-md-4 col-lg-3">
+                    <label class="special-input">
+                        <span>الاسم</span>
+                        <div class="box-input">
+                            <input type="text" name="name" value="{{ old('name') }}">
+                        </div>
+                        @error('name') <span class="text-danger">{{ $message }}</span> @enderror
+                    </label>
+                </div>
+
+                <div class="col-12 col-md-4 col-lg-3">
+                    <label class="special-input">
+                        <span>البريد الالكتروني</span>
+                        <div class="box-input">
+                            <input type="email" name="email" value="{{ old('email') }}">
+                        </div>
+                        @error('email') <span class="text-danger">{{ $message }}</span> @enderror
+                    </label>
+                </div>
+
+                <div class="col-12 col-md-4 col-lg-3">
+                    <label class="special-input">
+                        <span>الهاتف</span>
+                        <div class="box-input">
+                            <input type="text" name="phone" value="{{ old('phone') }}">
+                        </div>
+                        @error('phone') <span class="text-danger">{{ $message }}</span> @enderror
+                    </label>
+                </div>
+
+                <div class="col-12 col-md-4 col-lg-3">
+                    <label class="special-label">الحالة</label>
+                    <select name="status" class="form-select select-setting">
+                        @foreach (\App\Enums\StatusUser::cases() as $status)
+                            <option value="{{ $status->value }}" @selected(old('status') == $status->value)>
+                                {{ $status->name() }}
+                            </option>
+                        @endforeach
+                    </select>
+                    @error('status') <span class="text-danger">{{ $message }}</span> @enderror
+                </div>
+
+                <div class="col-12 col-md-4 col-lg-3">
+                    <label class="special-input">
+                        <span>صورة</span>
+                        <div class="box-input pe-0 border-0">
+                            <input type="file" name="image" class="form-control" accept="image/*">
+                        </div>
+                    </label>
+                    @error('image') <span class="text-danger">{{ $message }}</span> @enderror
+                </div>
+
+                <div class="col-12 col-md-4 col-lg-3">
+                    <label class="special-input">
+                        <span>كلمة المرور</span>
+                        <div class="box-input">
+                            <input type="password" name="password">
+                        </div>
+                    </label>
+                    @error('password') <span class="text-danger">{{ $message }}</span> @enderror
+                </div>
+
+                <div class="col-12 col-md-4 col-lg-3">
+                    <label class="special-input">
+                        <span>تأكيد كلمة المرور</span>
+                        <div class="box-input">
+                            <input type="password" name="password_confirmation">
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <button class="d-flex justify-content-center mt-4 mx-auto" type="submit">
+                <a class="main-btn">حفظ</a>
+            </button>
+        </form>
+    </div>
+@endsection
