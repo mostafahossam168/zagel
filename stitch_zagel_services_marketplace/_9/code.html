@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f9f9fe;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary": "#ffffff",
+                        "tertiary": "#563900",
+                        "on-secondary-container": "#00722f",
+                        "on-surface": "#1a1c1f",
+                        "on-primary-fixed": "#001c39",
+                        "secondary-fixed": "#68ff8b",
+                        "tertiary-container": "#744e00",
+                        "surface": "#f9f9fe",
+                        "secondary": "#006e2d",
+                        "on-error-container": "#93000a",
+                        "outline": "#737780",
+                        "on-tertiary-fixed": "#281800",
+                        "secondary-fixed-dim": "#3fe26f",
+                        "inverse-surface": "#2f3034",
+                        "surface-tint": "#386092",
+                        "surface-variant": "#e2e2e7",
+                        "on-surface-variant": "#43474f",
+                        "surface-bright": "#f9f9fe",
+                        "on-background": "#1a1c1f",
+                        "tertiary-fixed-dim": "#f3be6b",
+                        "primary": "#0f3f70",
+                        "on-secondary-fixed-variant": "#005320",
+                        "background": "#f9f9fe",
+                        "primary-fixed": "#d4e3ff",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed": "#ffddaf",
+                        "surface-container": "#eeedf2",
+                        "error-container": "#ffdad6",
+                        "primary-fixed-dim": "#a4c9ff",
+                        "on-tertiary-fixed-variant": "#614000",
+                        "primary-container": "#2e5789",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed-variant": "#1c4879",
+                        "surface-container-low": "#f3f3f8",
+                        "inverse-on-surface": "#f1f0f5",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-container": "#accdff",
+                        "outline-variant": "#c3c6d0",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-container": "#f7c26f",
+                        "secondary-container": "#5ffd86",
+                        "on-primary": "#ffffff",
+                        "inverse-primary": "#a4c9ff",
+                        "surface-container-high": "#e8e8ec",
+                        "on-secondary-fixed": "#002108",
+                        "surface-container-highest": "#e2e2e7",
+                        "surface-dim": "#dad9de"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "10px",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "xl": "32px",
+                        "xs": "4px",
+                        "grid-columns": "12",
+                        "lg": "24px",
+                        "xxl": "48px",
+                        "margin-mobile": "16px",
+                        "md": "16px",
+                        "sm": "8px",
+                        "base": "4px",
+                        "margin-desktop": "auto"
+                    },
+                    "fontFamily": {
+                        "label-lg": ["Cairo"],
+                        "body-md": ["Cairo"],
+                        "display-md": ["Cairo"],
+                        "headline-lg-mobile": ["Cairo"],
+                        "display-lg": ["Cairo"],
+                        "body-lg": ["Cairo"],
+                        "headline-md": ["Cairo"],
+                        "headline-lg": ["Cairo"],
+                        "label-sm": ["Cairo"]
+                    },
+                    "fontSize": {
+                        "label-lg": ["14px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-md": ["36px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "headline-lg": ["28px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-inverse-surface shadow-md docked full-width top-0 z-50 sticky">
+<div class="flex flex-row-reverse justify-between items-center w-full px-4 md:px-margin-desktop max-w-[1200px] mx-auto h-20">
+<div class="flex items-center gap-8 flex-row-reverse">
+<span class="font-headline-lg text-headline-lg font-bold text-primary dark:text-primary-fixed-dim">زاجل</span>
+<nav class="hidden md:flex flex-row-reverse items-center gap-6">
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 font-label-lg text-label-lg" href="#">الرئيسية</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 font-label-lg text-label-lg" href="#">الخدمات</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 font-label-lg text-label-lg" href="#">مزودي الخدمة</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 font-label-lg text-label-lg" href="#">أضف مشروعك</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 font-label-lg text-label-lg" href="#">عن زاجل</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 font-label-lg text-label-lg" href="#">تواصل معنا</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-lg font-label-lg text-label-lg scale-95 active:scale-90 transition-transform">تسجيل الدخول</button>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="max-w-[1200px] mx-auto px-4 md:px-gutter py-xl min-h-screen">
+<!-- Page Header & Action -->
+<div class="flex flex-row-reverse justify-between items-center mb-xl">
+<h1 class="font-headline-lg text-headline-lg text-primary font-bold">التنبيهات</h1>
+<button class="flex items-center gap-2 text-primary hover:bg-primary-fixed-dim/10 px-4 py-2 rounded-lg transition-colors font-label-lg text-label-lg border border-primary/20">
+<span class="material-symbols-outlined text-[20px]">done_all</span>
+<span>تحديد الكل كمقروء</span>
+</button>
+</div>
+<!-- Notifications Container - Bento Style -->
+<div class="grid grid-cols-1 gap-4">
+<!-- Unread Notification Item -->
+<div class="bg-surface-container-lowest p-md rounded-lg shadow-[0_4px_24px_rgba(0,0,0,0.08)] border-r-4 border-primary flex flex-row-reverse items-start gap-4 transition-transform hover:scale-[1.01] duration-200">
+<div class="bg-primary-fixed w-12 h-12 rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary" data-weight="fill" style="font-variation-settings: 'FILL' 1;">notifications</span>
+</div>
+<div class="flex-grow text-right">
+<div class="flex flex-row-reverse justify-between items-center mb-1">
+<span class="font-label-sm text-label-sm text-primary font-bold">جديد</span>
+<span class="font-label-sm text-label-sm text-outline">منذ دقيقتين</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">تم قبول عرضك المقدم لمشروع "تصميم هوية بصرية فاخرة". يمكنك الآن البدء في التواصل مع صاحب المشروع.</p>
+</div>
+</div>
+<!-- Unread Notification Item -->
+<div class="bg-surface-container-lowest p-md rounded-lg shadow-[0_4px_24px_rgba(0,0,0,0.08)] border-r-4 border-primary flex flex-row-reverse items-start gap-4 transition-transform hover:scale-[1.01] duration-200">
+<div class="bg-secondary-container w-12 h-12 rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-secondary-container" data-weight="fill" style="font-variation-settings: 'FILL' 1;">payments</span>
+</div>
+<div class="flex-grow text-right">
+<div class="flex flex-row-reverse justify-between items-center mb-1">
+<span class="font-label-sm text-label-sm text-primary font-bold">تحديث مالي</span>
+<span class="font-label-sm text-label-sm text-outline">منذ ساعة</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">تم تحويل مستحقاتك المالية بنجاح إلى حسابك البنكي المربوط بالمنصة.</p>
+</div>
+</div>
+<!-- Read Notification Item -->
+<div class="bg-surface-container-low p-md rounded-lg border-r-4 border-transparent flex flex-row-reverse items-start gap-4 transition-opacity opacity-80 hover:opacity-100">
+<div class="bg-surface-variant w-12 h-12 rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-surface-variant">person_add</span>
+</div>
+<div class="flex-grow text-right">
+<div class="flex flex-row-reverse justify-between items-center mb-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">متابعة جديدة</span>
+<span class="font-label-sm text-label-sm text-outline">أمس</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">بدأ "أحمد محمد" في متابعة ملفك الشخصي كخبير معتمد.</p>
+</div>
+</div>
+<!-- Read Notification Item -->
+<div class="bg-surface-container-low p-md rounded-lg border-r-4 border-transparent flex flex-row-reverse items-start gap-4 transition-opacity opacity-80 hover:opacity-100">
+<div class="bg-surface-variant w-12 h-12 rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-surface-variant">article</span>
+</div>
+<div class="flex-grow text-right">
+<div class="flex flex-row-reverse justify-between items-center mb-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">مشروع ملائم</span>
+<span class="font-label-sm text-label-sm text-outline">منذ يومين</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">تمت إضافة مشروع جديد يطابق مهاراتك: "تطوير تطبيق متجر إلكتروني متكامل".</p>
+</div>
+</div>
+<!-- Read Notification Item with Image -->
+<div class="bg-surface-container-low p-md rounded-lg border-r-4 border-transparent flex flex-row-reverse items-start gap-4 transition-opacity opacity-80 hover:opacity-100">
+<img alt="Avatar" class="w-12 h-12 rounded-full object-cover shrink-0" data-alt="A professional portrait of a business woman smiling in a bright modern corporate office environment with soft natural lighting and glass walls in the background. The aesthetic is clean and high-end light mode, with a shallow depth of field focusing on the subject to imply reliability and hospitality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKqPlEwj82l3hhR9HjpGM8b5VSXugZkFZNVKWqlwkQSDjYo1UxJy6tdN_xB3cdhOiRqY6XlJOTNoFtEkFhhwlwZahl4Zgstv_NpkuFpL7JyxxIEvkj1oD6luw0kHVZE2erjNYWaU8ZvVpgT8AgN78_0pPko4XeLzRoybeefVuPSyHiABVT14l66w0eVMJyl_aBq5ElWEIjbDP8YZN55vh8GdKVTgk6JV20wESlLOlmdQN3ByvBd1ziYnkwutZ3XNKK_Kw6-IcKfglO"/>
+<div class="flex-grow text-right">
+<div class="flex flex-row-reverse justify-between items-center mb-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">رسالة جديدة</span>
+<span class="font-label-sm text-label-sm text-outline">3 أيام</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">أرسلت لك سارة رسالة جديدة بخصوص المشروع القائم.</p>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-xxl flex flex-row-reverse justify-center items-center gap-2">
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant hover:bg-surface-container text-primary">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-primary text-on-primary font-bold">1</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant hover:bg-surface-container text-on-surface">2</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant hover:bg-surface-container text-on-surface">3</button>
+<span class="px-2 text-outline">...</span>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant hover:bg-surface-container text-on-surface">12</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant hover:bg-surface-container text-primary">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-surface-dim border-t border-outline-variant dark:border-outline full-width mt-xxl">
+<div class="flex flex-col w-full py-xxl px-4 md:px-margin-desktop max-w-[1200px] mx-auto text-right">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-xl mb-xl">
+<div class="md:col-span-1">
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim mb-4">زاجل</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">منصة الخدمات الموثوقة التي تجمع بين التميز والاحترافية لتسهيل إنجاز مشاريعكم بكفاءة عالية.</p>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-primary mb-4">روابط سريعة</h4>
+<ul class="space-y-2">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:underline decoration-primary" href="#">عن المنصة</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:underline decoration-primary" href="#">الأسئلة الشائعة</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:underline decoration-primary" href="#">شروط الاستخدام</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-primary mb-4">خدماتنا</h4>
+<ul class="space-y-2">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:underline decoration-primary" href="#">البحث عن خبير</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:underline decoration-primary" href="#">نشر مشروع</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:underline decoration-primary" href="#">نظام الدفع الآمن</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-primary mb-4">تواصل معنا</h4>
+<div class="flex flex-row-reverse gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer hover:opacity-100 opacity-80 transition-opacity">mail</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:opacity-100 opacity-80 transition-opacity">call</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:opacity-100 opacity-80 transition-opacity">share</span>
+</div>
+</div>
+</div>
+<div class="pt-xl border-t border-outline-variant/30 flex flex-col md:flex-row-reverse justify-between items-center gap-4">
+<p class="font-label-sm text-label-sm text-on-surface-variant opacity-80">© 2024 زاجل. جميع الحقوق محفوظة. منصة الخدمات الموثوقة.</p>
+<div class="flex gap-6">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:underline" href="#">سياسة الخصوصية</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:underline" href="#">الكوكيز</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

@@ -16,10 +16,21 @@ class SettingController extends Controller
     {
         $current_file = ['logo', 'fav'];
         $files = $request->file();
-        $data = $request->except(array_keys($files), '_token');
+        $data  = $request->except(array_keys($files), '_token');
         if (empty($files)) {
             foreach ($current_file as $ele) {
                 $data[$ele] = setting($ele);
+            }
+        }
+        $color_defaults = [
+            'primary_color'   => '#2E5789',
+            'secondary_color' => '#0FC859',
+            'accent_color'    => '#F99132',
+            'dark_color'      => '#243848',
+        ];
+        foreach ($color_defaults as $key => $default) {
+            if (empty($data[$key])) {
+                $data[$key] = setting($key, $default);
             }
         }
         foreach ($files as $file => $value) {

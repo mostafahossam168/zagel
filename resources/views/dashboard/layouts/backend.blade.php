@@ -44,6 +44,29 @@
     <script src="{{ asset('dashboard/js/main.js') }}"></script>
     <script src="https://js.pusher.com/8.4.0/pusher.min.js"></script>
 
+    @auth
+    <script>
+        (function () {
+            const pusher = new Pusher('{{ config('broadcasting.connections.pusher.key') }}', {
+                cluster: '{{ config('broadcasting.connections.pusher.options.cluster') }}',
+                forceTLS: true,
+                authEndpoint: '{{ url('/broadcasting/auth') }}',
+                auth: { headers: { 'X-CSRF-TOKEN': '{{ csrf_token() }}' } }
+            });
+
+            const channel = pusher.subscribe('private-App.Models.User.{{ auth()->id() }}');
+            channel.bind('Illuminate\\Notifications\\Events\\BroadcastNotificationCreated', function () {
+                const badge = document.getElementById('bell-badge');
+                if (badge) {
+                    const current = parseInt(badge.textContent) || 0;
+                    badge.textContent = current + 1;
+                    badge.classList.remove('d-none');
+                }
+            });
+        })();
+    </script>
+    @endauth
+
     @stack('scripts')
 
 </body>

@@ -9,6 +9,7 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withRouting(
         web: __DIR__ . '/../routes/web.php',
         commands: __DIR__ . '/../routes/console.php',
+        channels: __DIR__ . '/../routes/channels.php',
         health: '/up',
         then: function () {
             Route::middleware(['web'])->prefix('dashboard')
@@ -19,6 +20,8 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->alias([
             'check_admin' => App\Http\Middleware\CheckAdmin::class,
             'guest_admin' => App\Http\Middleware\GuestAdmin::class,
+            'check_user'  => App\Http\Middleware\CheckUser::class,
+            'guest_user'  => App\Http\Middleware\GuestUser::class,
             // 'check_teacher' => App\Http\Middleware\CheckTeacher::class,
             // 'check_active' => App\Http\Middleware\CheckActive::class,
             // 'check_website' => App\Http\Middleware\CheckWebsite::class,

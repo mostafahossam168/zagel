@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html class="light" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary": "#ffffff",
+                    "tertiary": "#563900",
+                    "on-secondary-container": "#00722f",
+                    "on-surface": "#1a1c1f",
+                    "on-primary-fixed": "#001c39",
+                    "secondary-fixed": "#68ff8b",
+                    "tertiary-container": "#744e00",
+                    "surface": "#f9f9fe",
+                    "secondary": "#006e2d",
+                    "on-error-container": "#93000a",
+                    "outline": "#737780",
+                    "on-tertiary-fixed": "#281800",
+                    "secondary-fixed-dim": "#3fe26f",
+                    "inverse-surface": "#2f3034",
+                    "surface-tint": "#386092",
+                    "surface-variant": "#e2e2e7",
+                    "on-surface-variant": "#43474f",
+                    "surface-bright": "#f9f9fe",
+                    "on-background": "#1a1c1f",
+                    "tertiary-fixed-dim": "#f3be6b",
+                    "primary": "#0f3f70",
+                    "on-secondary-fixed-variant": "#005320",
+                    "background": "#f9f9fe",
+                    "primary-fixed": "#d4e3ff",
+                    "error": "#ba1a1a",
+                    "tertiary-fixed": "#ffddaf",
+                    "surface-container": "#eeedf2",
+                    "error-container": "#ffdad6",
+                    "primary-fixed-dim": "#a4c9ff",
+                    "on-tertiary-fixed-variant": "#614000",
+                    "primary-container": "#2e5789",
+                    "on-error": "#ffffff",
+                    "on-primary-fixed-variant": "#1c4879",
+                    "surface-container-low": "#f3f3f8",
+                    "inverse-on-surface": "#f1f0f5",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-container": "#accdff",
+                    "outline-variant": "#c3c6d0",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-container": "#f7c26f",
+                    "secondary-container": "#5ffd86",
+                    "on-primary": "#ffffff",
+                    "inverse-primary": "#a4c9ff",
+                    "surface-container-high": "#e8e8ec",
+                    "on-secondary-fixed": "#002108",
+                    "surface-container-highest": "#e2e2e7",
+                    "surface-dim": "#dad9de"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "xl": "32px",
+                    "xs": "4px",
+                    "grid-columns": "12",
+                    "lg": "24px",
+                    "xxl": "48px",
+                    "margin-mobile": "16px",
+                    "md": "16px",
+                    "sm": "8px",
+                    "base": "4px",
+                    "margin-desktop": "auto"
+            },
+            "fontFamily": {
+                    "label-lg": ["Cairo"],
+                    "body-md": ["Cairo"],
+                    "display-md": ["Cairo"],
+                    "headline-lg-mobile": ["Cairo"],
+                    "display-lg": ["Cairo"],
+                    "body-lg": ["Cairo"],
+                    "headline-md": ["Cairo"],
+                    "headline-lg": ["Cairo"],
+                    "label-sm": ["Cairo"]
+            },
+            "fontSize": {
+                    "label-lg": ["14px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-md": ["36px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "headline-lg": ["28px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Cairo', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- TopNavBar Component -->
+<header class="bg-surface dark:bg-inverse-surface shadow-md docked full-width top-0 z-50 sticky">
+<nav class="flex flex-row-reverse justify-between items-center w-full px-4 md:px-margin-desktop max-w-[1200px] mx-auto h-20">
+<div class="font-headline-lg text-headline-lg font-bold text-primary dark:text-primary-fixed-dim">زاجل</div>
+<!-- Desktop Links -->
+<ul class="hidden md:flex flex-row-reverse gap-gutter">
+<li><a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">الرئيسية</a></li>
+<li><a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">الخدمات</a></li>
+<li><a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">مزودي الخدمة</a></li>
+<li><a class="text-primary dark:text-primary-fixed-dim font-bold border-b-2 border-primary dark:border-primary-fixed-dim pb-1" href="#">أضف مشروعك</a></li>
+<li><a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">عن زاجل</a></li>
+<li><a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">تواصل معنا</a></li>
+</ul>
+<button class="bg-primary text-on-primary px-lg py-2 rounded-lg font-label-lg transition-transform scale-95 active:scale-90">تسجيل الدخول</button>
+</nav>
+</header>
+<!-- Main Content Canvas -->
+<main class="py-xxl px-margin-mobile flex flex-col items-center">
+<!-- Header Section -->
+<div class="w-full max-w-[720px] mb-xl text-center">
+<h1 class="font-display-md text-display-md text-primary mb-base">أضف خدمتك</h1>
+<p class="font-body-lg text-on-surface-variant">شارك مهاراتك مع مجتمع زاجل وابدأ رحلة نجاحك المهني</p>
+</div>
+<!-- Service Form Card -->
+<div class="w-full max-w-[720px] bg-surface-container-lowest rounded-[10px] p-xl shadow-[0_4px_24px_rgba(0,0,0,0.08)] border border-outline-variant/30">
+<form action="#" class="space-y-gutter" method="POST">
+<!-- Title & Description -->
+<div class="space-y-sm">
+<label class="block font-label-lg text-on-surface" for="service_title">عنوان الخدمة</label>
+<input class="w-full bg-surface-container-low border-none rounded-[10px] focus:ring-2 focus:ring-primary h-12 px-md font-body-md" id="service_title" name="service_title" placeholder="مثلاً: تصميم هوية بصرية متكاملة" type="text"/>
+</div>
+<div class="space-y-sm">
+<label class="block font-label-lg text-on-surface" for="service_desc">الوصف</label>
+<textarea class="w-full bg-surface-container-low border-none rounded-[10px] focus:ring-2 focus:ring-primary p-md font-body-md" id="service_desc" name="service_desc" placeholder="اشرح تفاصيل الخدمة والمميزات التي ستقدمها للعميل..." rows="4"></textarea>
+</div>
+<!-- Drag & Drop Upload -->
+<div class="space-y-sm">
+<label class="block font-label-lg text-on-surface">صورة الخدمة</label>
+<div class="relative group border-2 border-dashed border-outline-variant rounded-[10px] p-xxl flex flex-col items-center justify-center bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-primary text-[48px] mb-md" data-icon="cloud_upload">cloud_upload</span>
+<p class="font-label-lg text-on-surface-variant">اسحب الصورة هنا أو <span class="text-primary underline">تصفح ملفاتك</span></p>
+<p class="font-label-sm text-outline mt-xs">PNG, JPG حتى 5 ميجابايت</p>
+<input class="absolute inset-0 opacity-0 cursor-pointer" type="file"/>
+</div>
+</div>
+<!-- Category & Pricing -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="space-y-sm">
+<label class="block font-label-lg text-on-surface" for="category">التصنيف</label>
+<select class="w-full bg-surface-container-low border-none rounded-[10px] focus:ring-2 focus:ring-primary h-12 px-md font-body-md appearance-none" id="category" name="category">
+<option value="">اختر التصنيف...</option>
+<option value="design">التصميم</option>
+<option value="dev">البرمجة</option>
+<option value="marketing">التسويق</option>
+<option value="content">كتابة المحتوى</option>
+</select>
+</div>
+<div class="space-y-sm">
+<label class="block font-label-lg text-on-surface">السعر</label>
+<div class="flex">
+<input class="flex-1 bg-surface-container-low border-none rounded-r-[10px] focus:ring-2 focus:ring-primary h-12 px-md font-body-md" name="price" placeholder="0.00" type="number"/>
+<select class="w-24 bg-surface-container-high border-none rounded-l-[10px] focus:ring-2 focus:ring-primary h-12 px-md font-label-lg" name="currency">
+<option value="SAR">ر.س</option>
+<option value="USD">$</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Contact Info -->
+<div class="pt-md border-t border-outline-variant/30">
+<h3 class="font-headline-md text-primary mb-gutter">معلومات التواصل</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="space-y-sm">
+<label class="block font-label-lg text-on-surface" for="phone">رقم الهاتف (مطلوب)</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline" data-icon="call">call</span>
+<input class="w-full bg-surface-container-low border-none rounded-[10px] focus:ring-2 focus:ring-primary h-12 px-md pl-10 font-body-md text-left" dir="ltr" id="phone" name="phone" placeholder="05xxxxxxxx" required="" type="tel"/>
+</div>
+</div>
+<div class="space-y-sm">
+<label class="block font-label-lg text-on-surface" for="whatsapp">واتساب (اختياري)</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline" data-icon="chat">chat</span>
+<input class="w-full bg-surface-container-low border-none rounded-[10px] focus:ring-2 focus:ring-primary h-12 px-md pl-10 font-body-md text-left" dir="ltr" id="whatsapp" name="whatsapp" placeholder="05xxxxxxxx" type="tel"/>
+</div>
+</div>
+<div class="md:col-span-2 space-y-sm">
+<label class="block font-label-lg text-on-surface" for="email">البريد الإلكتروني</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline" data-icon="mail">mail</span>
+<input class="w-full bg-surface-container-low border-none rounded-[10px] focus:ring-2 focus:ring-primary h-12 px-md pl-10 font-body-md text-left" dir="ltr" id="email" name="email" placeholder="example@domain.com" type="email"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Social Links -->
+<div class="space-y-sm">
+<label class="block font-label-lg text-on-surface">روابط الشبكات الاجتماعية</label>
+<div class="space-y-xs">
+<div class="relative">
+<input class="w-full bg-surface-container-low border-none rounded-[10px] focus:ring-2 focus:ring-primary h-12 px-md font-body-md text-left" dir="ltr" name="social_linkedin" placeholder="LinkedIn URL" type="url"/>
+</div>
+<div class="relative">
+<input class="w-full bg-surface-container-low border-none rounded-[10px] focus:ring-2 focus:ring-primary h-12 px-md font-body-md text-left" dir="ltr" name="social_x" placeholder="X (Twitter) URL" type="url"/>
+</div>
+</div>
+</div>
+<!-- Submit Button -->
+<div class="pt-lg">
+<button class="w-full bg-primary text-on-primary font-headline-md h-14 rounded-lg shadow-lg hover:bg-primary-container transition-all scale-100 active:scale-95 flex items-center justify-center gap-sm" type="submit">
+                        إرسال الخدمة للمراجعة
+                        <span class="material-symbols-outlined" data-icon="send">send</span>
+</button>
+<p class="text-center font-label-sm text-outline mt-md">بالنقر على الإرسال، فإنك توافق على شروط الخدمة وسياسة الخصوصية الخاصة بنا.</p>
+</div>
+</form>
+</div>
+</main>
+<!-- Footer Component -->
+<footer class="bg-surface-container-highest dark:bg-surface-dim full-width border-t border-outline-variant dark:border-outline">
+<div class="flex flex-col w-full py-xxl px-4 md:px-margin-desktop max-w-[1200px] mx-auto text-right">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter mb-xl">
+<div>
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim mb-4">زاجل</div>
+<p class="font-body-md text-on-surface-variant">المنصة الأولى لربط المحترفين بالمشاريع في العالم العربي بكفاءة وموثوقية.</p>
+</div>
+<div>
+<h4 class="font-label-lg text-primary mb-md">روابط سريعة</h4>
+<ul class="space-y-sm">
+<li><a class="text-on-surface-variant hover:underline decoration-primary font-body-md" href="#">عن المنصة</a></li>
+<li><a class="text-on-surface-variant hover:underline decoration-primary font-body-md" href="#">الأسئلة الشائعة</a></li>
+<li><a class="text-on-surface-variant hover:underline decoration-primary font-body-md" href="#">الشروط والأحكام</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-lg text-primary mb-md">تواصل معنا</h4>
+<ul class="space-y-sm">
+<li><a class="text-on-surface-variant hover:underline decoration-primary font-body-md" href="#">الدعم الفني</a></li>
+<li><a class="text-on-surface-variant hover:underline decoration-primary font-body-md" href="#">خدمة العملاء</a></li>
+<li><a class="text-on-surface-variant hover:underline decoration-primary font-body-md" href="#">البريد الإلكتروني</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-lg text-primary mb-md">الشبكات الاجتماعية</h4>
+<div class="flex gap-md justify-end">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary" data-icon="public">public</span>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary" data-icon="alternate_email">alternate_email</span>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary" data-icon="share">share</span>
+</div>
+</div>
+</div>
+<div class="border-t border-outline-variant/30 pt-lg text-center">
+<p class="font-label-sm text-on-surface-variant opacity-80">© 2024 زاجل. جميع الحقوق محفوظة. منصة الخدمات الموثوقة.</p>
+</div>
+</div>
+</footer>
+</body></html>

@@ -131,6 +131,69 @@
                 </div>
             @endcan
 
+            @can('read_services')
+                <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                    <div class="box-statistic blue">
+                        <div class="right-side">
+                            <h6 class="name">الخدمات</h6>
+                            <h3 class="amount">
+                                <span class="num-stat" data-goal="{{ \App\Models\Service::count() }}">0</span>
+                            </h3>
+                            <a href="{{ route('dashboard.services.index') }}" class="link-view">عرض جميع الخدمات</a>
+                        </div>
+                        <div class="left-side">
+                            <div class="icon-holder blue">
+                                <i class="fa-solid fa-briefcase"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            @endcan
+
+            @can('read_testimonials')
+                <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                    <div class="box-statistic purple">
+                        <div class="right-side">
+                            <h6 class="name">الشهادات</h6>
+                            <h3 class="amount">
+                                <span class="num-stat" data-goal="{{ \App\Models\Testimonial::count() }}">0</span>
+                            </h3>
+                            <a href="{{ route('dashboard.testimonials.index') }}" class="link-view">عرض جميع الشهادات</a>
+                        </div>
+                        <div class="left-side">
+                            <div class="icon-holder yellow">
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            @endcan
+
+            @can('read_project_submissions')
+                @php $pendingProjects = \App\Models\ProjectSubmission::where('status', \App\Enums\ProjectSubmissionStatus::NEW->value)->count(); @endphp
+                <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                    <div class="box-statistic">
+                        <div class="right-side">
+                            <h6 class="name">
+                                المشاريع المقدمة
+                                @if($pendingProjects > 0)
+                                    <span class="badge bg-danger ms-1">{{ $pendingProjects }} جديد</span>
+                                @endif
+                            </h6>
+                            <h3 class="amount">
+                                <span class="num-stat" data-goal="{{ \App\Models\ProjectSubmission::count() }}">0</span>
+                            </h3>
+                            <a href="{{ route('dashboard.project-submissions.index') }}" class="link-view">عرض جميع المشاريع</a>
+                        </div>
+                        <div class="left-side">
+                            <div class="icon-holder">
+                                <i class="fa-solid fa-lightbulb"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            @endcan
+
         </div>
     </div>
 @endsection

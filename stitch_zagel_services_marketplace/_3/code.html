@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Cairo', sans-serif;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary": "#ffffff",
+                      "tertiary": "#563900",
+                      "on-secondary-container": "#00722f",
+                      "on-surface": "#1a1c1f",
+                      "on-primary-fixed": "#001c39",
+                      "secondary-fixed": "#68ff8b",
+                      "tertiary-container": "#744e00",
+                      "surface": "#f9f9fe",
+                      "secondary": "#006e2d",
+                      "on-error-container": "#93000a",
+                      "outline": "#737780",
+                      "on-tertiary-fixed": "#281800",
+                      "secondary-fixed-dim": "#3fe26f",
+                      "inverse-surface": "#2f3034",
+                      "surface-tint": "#386092",
+                      "surface-variant": "#e2e2e7",
+                      "on-surface-variant": "#43474f",
+                      "surface-bright": "#f9f9fe",
+                      "on-background": "#1a1c1f",
+                      "tertiary-fixed-dim": "#f3be6b",
+                      "primary": "#0f3f70",
+                      "on-secondary-fixed-variant": "#005320",
+                      "background": "#f9f9fe",
+                      "primary-fixed": "#d4e3ff",
+                      "error": "#ba1a1a",
+                      "tertiary-fixed": "#ffddaf",
+                      "surface-container": "#eeedf2",
+                      "error-container": "#ffdad6",
+                      "primary-fixed-dim": "#a4c9ff",
+                      "on-tertiary-fixed-variant": "#614000",
+                      "primary-container": "#2e5789",
+                      "on-error": "#ffffff",
+                      "on-primary-fixed-variant": "#1c4879",
+                      "surface-container-low": "#f3f3f8",
+                      "inverse-on-surface": "#f1f0f5",
+                      "surface-container-lowest": "#ffffff",
+                      "on-primary-container": "#accdff",
+                      "outline-variant": "#c3c6d0",
+                      "on-tertiary": "#ffffff",
+                      "on-tertiary-container": "#f7c26f",
+                      "secondary-container": "#5ffd86",
+                      "on-primary": "#ffffff",
+                      "inverse-primary": "#a4c9ff",
+                      "surface-container-high": "#e8e8ec",
+                      "on-secondary-fixed": "#002108",
+                      "surface-container-highest": "#e2e2e7",
+                      "surface-dim": "#dad9de"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "xl": "32px",
+                      "xs": "4px",
+                      "grid-columns": "12",
+                      "lg": "24px",
+                      "xxl": "48px",
+                      "margin-mobile": "16px",
+                      "md": "16px",
+                      "sm": "8px",
+                      "base": "4px",
+                      "margin-desktop": "auto"
+              },
+              "fontFamily": {
+                      "label-lg": ["Cairo"],
+                      "body-md": ["Cairo"],
+                      "display-md": ["Cairo"],
+                      "headline-lg-mobile": ["Cairo"],
+                      "display-lg": ["Cairo"],
+                      "body-lg": ["Cairo"],
+                      "headline-md": ["Cairo"],
+                      "headline-lg": ["Cairo"],
+                      "label-sm": ["Cairo"]
+              },
+              "fontSize": {
+                      "label-lg": ["14px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "display-md": ["36px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                      "headline-lg-mobile": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                      "display-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                      "headline-lg": ["28px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                      "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+      </script>
+</head>
+<body class="bg-background text-on-surface">
+<!-- TopNavBar Component -->
+<header class="bg-surface dark:bg-inverse-surface shadow-md docked full-width top-0 z-50 sticky h-20">
+<div class="flex flex-row-reverse justify-between items-center w-full px-margin-desktop max-w-[1200px] mx-auto h-full px-4 md:px-0">
+<!-- Brand Logo -->
+<div class="font-headline-lg text-headline-lg font-bold text-primary dark:text-primary-fixed-dim">زاجل</div>
+<!-- Navigation Links -->
+<nav class="hidden md:flex flex-row-reverse items-center gap-xl">
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="#">الرئيسية</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="#">الخدمات</a>
+<a class="text-primary dark:text-primary-fixed-dim font-bold border-b-2 border-primary dark:border-primary-fixed-dim pb-1" href="#">مزودي الخدمة</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="#">أضف مشروعك</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="#">عن زاجل</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="#">تواصل معنا</a>
+</nav>
+<!-- Trailing Action -->
+<button class="bg-primary-container text-on-primary-container px-lg py-sm rounded-lg font-label-lg text-label-lg scale-95 active:scale-90 transition-transform">
+                تسجيل الدخول
+            </button>
+</div>
+</header>
+<main class="max-w-[1200px] mx-auto px-4 md:px-0 py-xxl">
+<!-- Page Title & Description -->
+<div class="mb-xxl text-right">
+<h1 class="font-display-md text-display-md text-primary mb-sm">مزودو الخدمة المعتمدون</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl ml-auto">
+                اكتشف نخبة من المحترفين والشركات المعتمدة لتقديم أفضل الخدمات بجودة عالية واحترافية متناهية.
+            </p>
+</div>
+<!-- Category Filter Bar -->
+<div class="flex flex-row-reverse items-center gap-sm overflow-x-auto pb-lg no-scrollbar mb-xl">
+<button class="flex-shrink-0 bg-primary text-on-primary px-lg py-sm rounded-full font-label-lg text-label-lg">الكل</button>
+<button class="flex-shrink-0 bg-surface-container-highest text-on-surface-variant px-lg py-sm rounded-full font-label-lg text-label-lg hover:bg-outline-variant transition-colors">الاستشارات القانونية</button>
+<button class="flex-shrink-0 bg-surface-container-highest text-on-surface-variant px-lg py-sm rounded-full font-label-lg text-label-lg hover:bg-outline-variant transition-colors">التطوير البرمجي</button>
+<button class="flex-shrink-0 bg-surface-container-highest text-on-surface-variant px-lg py-sm rounded-full font-label-lg text-label-lg hover:bg-outline-variant transition-colors">التسويق الرقمي</button>
+<button class="flex-shrink-0 bg-surface-container-highest text-on-surface-variant px-lg py-sm rounded-full font-label-lg text-label-lg hover:bg-outline-variant transition-colors">التصميم الجرافيكي</button>
+<button class="flex-shrink-0 bg-surface-container-highest text-on-surface-variant px-lg py-sm rounded-full font-label-lg text-label-lg hover:bg-outline-variant transition-colors">المحاسبة والتدقيق</button>
+<button class="flex-shrink-0 bg-surface-container-highest text-on-surface-variant px-lg py-sm rounded-full font-label-lg text-label-lg hover:bg-outline-variant transition-colors">الترجمة المعتمدة</button>
+</div>
+<!-- Providers Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg">
+<!-- Provider Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0_4px_24px_rgba(0,0,0,0.08)] overflow-hidden flex flex-col border border-outline-variant/30 hover:border-primary/30 transition-all duration-300">
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A professional middle-eastern male consultant in a sleek modern office setting. He is wearing a tailored dark suit and smiling confidently at the camera. The background is a blurred high-end corporate office with soft natural lighting coming from large windows. The overall aesthetic is professional, reliable, and corporate modern, aligned with a premium service marketplace." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCibQJZcn4TUrx8TpsyuTpMHBVwMAUAnY6eIHus6I0_QgRdh52qkHSxbesMak1UhR1PE0Jb0_Q5xCuR_znqian_JvlLtayPXBUpdQc2e_JMiP0X5qF7miuxiHKIGP6JK5U-AME8V8RxQX_TYf1XVU_RaziC-Tzg1QVAW3qlwkX_K2zHh9b5I4h65lNTwHxDA9xM191Xyd4BNXXDqZcH_A4NXmHV8Ro--lOV0MJu43sWnjGvJjQ3kj4ouenc0PYCJAPSx0oAEe2RRLZq"/>
+<div class="absolute top-4 left-4 bg-secondary text-on-secondary px-sm py-xs rounded-lg font-label-sm text-label-sm">مقبول</div>
+</div>
+<div class="p-lg flex flex-col flex-grow text-right">
+<div class="flex justify-between items-start mb-base">
+<h3 class="font-headline-md text-headline-md text-on-surface">أحمد المنصور</h3>
+<div class="flex items-center text-tertiary">
+<span class="font-label-lg text-label-lg ml-1">4.9</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<span class="text-primary font-label-lg text-label-lg mb-md">مستشار قانوني</span>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg line-clamp-2">خبرة أكثر من ١٠ سنوات في القضايا العمالية والتجارية، حاصل على ترخيص معتمد من وزارة العدل.</p>
+<div class="flex items-center justify-between mt-auto pt-md border-t border-outline-variant/30">
+<div class="text-on-surface font-headline-md text-headline-md">
+                            ٢٥٠ <span class="text-label-sm">ر.س/ساعة</span>
+</div>
+<div class="flex gap-sm">
+<a class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container-high text-primary hover:bg-primary hover:text-on-primary transition-colors" href="#">
+<span class="material-symbols-outlined">call</span>
+</a>
+<a class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container-high text-green-600 hover:bg-green-600 hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">chat</span>
+</a>
+<a class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container-high text-on-surface-variant hover:bg-primary hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">mail</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Provider Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0_4px_24px_rgba(0,0,0,0.08)] overflow-hidden flex flex-col border border-outline-variant/30 hover:border-primary/30 transition-all duration-300">
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A professional woman working on a high-tech laptop in a bright, contemporary workspace. She is wearing elegant business attire and has a focused expression. The room is decorated with minimalist furniture and indoor plants, bathed in soft, diffused daylight. The visual style is clean, modern, and trustworthy, reflecting high-quality professional services." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1mmXA4n3MOGu__Kx9LZXIeNFmAwOYE29Ocgt5LYRD17P1LjjuleyII0oxzN9cPG7n9puAhQ1zrh1E9bS4E4WSA98FThSmBYKqOP1ygEN75RFTKU6HMcrI42IO-POlhAb6eOVuLp7h99qxrY4axuUWbopC_5_ip5mSaxVlKnmpHS1vJ-Zu9M3d6YbcfPEGSgUGY2E4693h6_ZPq69WxRSm65TfmqSYxP31T3pMoURh4TA2GVbpmPRR08xKkw2MttUe5x2QqymmV22L"/>
+<div class="absolute top-4 left-4 bg-secondary text-on-secondary px-sm py-xs rounded-lg font-label-sm text-label-sm">مقبول</div>
+</div>
+<div class="p-lg flex flex-col flex-grow text-right">
+<div class="flex justify-between items-start mb-base">
+<h3 class="font-headline-md text-headline-md text-on-surface">سارة العتيبي</h3>
+<div class="flex items-center text-tertiary">
+<span class="font-label-lg text-label-lg ml-1">5.0</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<span class="text-primary font-label-lg text-label-lg mb-md">خبير تطوير تطبيقات</span>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg line-clamp-2">متخصصة في بناء تطبيقات الويب والهواتف الذكية باستخدام أحدث التقنيات لضمان أفضل تجربة مستخدم.</p>
+<div class="flex items-center justify-between mt-auto pt-md border-t border-outline-variant/30">
+<div class="text-on-surface font-headline-md text-headline-md">
+                            ٤٠٠ <span class="text-label-sm">ر.س/ساعة</span>
+</div>
+<div class="flex gap-sm">
+<a class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container-high text-primary" href="#">
+<span class="material-symbols-outlined">call</span>
+</a>
+<a class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container-high text-green-600" href="#">
+<span class="material-symbols-outlined">chat</span>
+</a>
+<a class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container-high text-on-surface-variant" href="#">
+<span class="material-symbols-outlined">mail</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Provider Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0_4px_24px_rgba(0,0,0,0.08)] overflow-hidden flex flex-col border border-outline-variant/30 hover:border-primary/30 transition-all duration-300">
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A portrait of a male creative professional in a studio filled with artistic elements and digital screens. He is wearing a smart-casual outfit and looks creative and approachable. The lighting is dramatic yet soft, highlighting a sophisticated and artistic mood. The color palette consists of neutral tones with deep blue accents, conveying a premium and innovative brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWOG5GPVeGvqVuxIytz0kKh3VO5ypbeHElgLNBK93aZjoNzj2yiaMUsfVKXRK_VtCCb0PO0OI0wZCOiF6OnrVp-wsSRA2cZuWSeedyxadEign0TmW1jdLMW7KgthSYO1U_XeSwRJjpB-aSW5rIYSnADKx2R9_34Y42pHV2Qe152WzvJjfRrcEtudfa5Amp73PI7Yv6hlNKWxGublHIk1-zvu8o0zSr0-d_J4v3nZULjEP-IAyzKNZHkIgec9aFAT6ekG-8HG5aNDy5"/>
+<div class="absolute top-4 left-4 bg-on-tertiary-container text-tertiary px-sm py-xs rounded-lg font-label-sm text-label-sm">معلق</div>
+</div>
+<div class="p-lg flex flex-col flex-grow text-right">
+<div class="flex justify-between items-start mb-base">
+<h3 class="font-headline-md text-headline-md text-on-surface">فهد السديري</h3>
+<div class="flex items-center text-tertiary">
+<span class="font-label-lg text-label-lg ml-1">4.7</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<span class="text-primary font-label-lg text-label-lg mb-md">مصمم هويات بصرية</span>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg line-clamp-2">خبير في بناء الهويات التجارية المتكاملة للشركات الناشئة والكبيرة بمفهوم عصري وفريد.</p>
+<div class="flex items-center justify-between mt-auto pt-md border-t border-outline-variant/30">
+<div class="text-on-surface font-headline-md text-headline-md">
+                            ١٥٠ <span class="text-label-sm">ر.س/ساعة</span>
+</div>
+<div class="flex gap-sm">
+<a class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container-high text-primary" href="#">
+<span class="material-symbols-outlined">call</span>
+</a>
+<a class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container-high text-green-600" href="#">
+<span class="material-symbols-outlined">chat</span>
+</a>
+<a class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container-high text-on-surface-variant" href="#">
+<span class="material-symbols-outlined">mail</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Provider Card 4 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0_4px_24px_rgba(0,0,0,0.08)] overflow-hidden flex flex-col border border-outline-variant/30 hover:border-primary/30 transition-all duration-300">
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A professional businesswoman in a boardroom setting, looking focused and determined. She is surrounded by modern office technology and a clean, minimalist environment. The image is bright with high-key lighting, emphasizing a corporate and trustworthy feel. The color palette is composed of crisp whites, soft greys, and deep primary blues, reflecting professional excellence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAU8oi2QYOGF7a0BmLuBznlXJ5KDBni87WlGHJyhFAbZZ16g-tZJUd3IRwbUbNWZsEGZPUTqz_dovApRthqY0VXiySwSn6NvYGTlBcXzUgt4_7Mo5S9QyWDsDvGgVUMRWfraZXIPSjoYP51HQJxUXW_qbj3wYC_8vA-kEzJidCrO3x5T-OTPEzYLgkevCJ3byM1hnZNNHMWP5zrnjBOrs-Y2dwaR5wf-8cI-zp4gt4sLpisT2PWlTuZTJgGN5BJwPEWuhpgop__f_lI"/>
+<div class="absolute top-4 left-4 bg-secondary text-on-secondary px-sm py-xs rounded-lg font-label-sm text-label-sm">مقبول</div>
+</div>
+<div class="p-lg flex flex-col flex-grow text-right">
+<div class="flex justify-between items-start mb-base">
+<h3 class="font-headline-md text-headline-md text-on-surface">نورة القحطاني</h3>
+<div class="flex items-center text-tertiary">
+<span class="font-label-lg text-label-lg ml-1">4.8</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<span class="text-primary font-label-lg text-label-lg mb-md">محللة بيانات مالية</span>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg line-clamp-2">تقديم تحليلات مالية دقيقة ودراسات جدوى للمشاريع الاستثمارية لضمان أفضل عائد مادي.</p>
+<div class="flex items-center justify-between mt-auto pt-md border-t border-outline-variant/30">
+<div class="text-on-surface font-headline-md text-headline-md">
+                            ٣٠٠ <span class="text-label-sm">ر.س/ساعة</span>
+</div>
+<div class="flex gap-sm">
+<a class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container-high text-primary" href="#">
+<span class="material-symbols-outlined">call</span>
+</a>
+<a class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container-high text-green-600" href="#">
+<span class="material-symbols-outlined">chat</span>
+</a>
+<a class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container-high text-on-surface-variant" href="#">
+<span class="material-symbols-outlined">mail</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Provider Card 5 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0_4px_24px_rgba(0,0,0,0.08)] overflow-hidden flex flex-col border border-outline-variant/30 hover:border-primary/30 transition-all duration-300">
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A male tech professional in a workspace with multiple screens displaying code and data visualizations. He has a welcoming and expert demeanor. The workspace is sleek and modern with warm accent lighting that creates a comfortable yet professional atmosphere. The design is minimalist, utilizing high-quality materials and a sophisticated neutral color scheme with blue highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGYKjXby7LY_LzVnc32hmq7cjdkqaGtd92mFjpaB0-6wjfWqxV49e47O22TlkyuRDRxlukBfAEUcC2urOLo-5f0rM2vR9u5tvHcRlOAkdtM9pi1mL9hRMVuxAMKgTwiWgIjNwvFL0DXiMgD28o9Se6u1vt0nWi7uQzEJFLHP3L2ZK_2YCNgDoEYZSawA_LiBCfOOQ4p2a3mlsrAiXIpeEMKZJHbR4wqm26CkJpSqv9jARsgrOGopM0x6UoRNCXDE9ja1p0dPY5gVpc"/>
+<div class="absolute top-4 left-4 bg-secondary text-on-secondary px-sm py-xs rounded-lg font-label-sm text-label-sm">مقبول</div>
+</div>
+<div class="p-lg flex flex-col flex-grow text-right">
+<div class="flex justify-between items-start mb-base">
+<h3 class="font-headline-md text-headline-md text-on-surface">خالد الشمري</h3>
+<div class="flex items-center text-tertiary">
+<span class="font-label-lg text-label-lg ml-1">4.6</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<span class="text-primary font-label-lg text-label-lg mb-md">خبير أمن سيبراني</span>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg line-clamp-2">تأمين البنية التحتية الرقمية وحماية البيانات من الاختراقات بأعلى المعايير العالمية.</p>
+<div class="flex items-center justify-between mt-auto pt-md border-t border-outline-variant/30">
+<div class="text-on-surface font-headline-md text-headline-md">
+                            ٥٠٠ <span class="text-label-sm">ر.س/ساعة</span>
+</div>
+<div class="flex gap-sm">
+<a class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container-high text-primary" href="#">
+<span class="material-symbols-outlined">call</span>
+</a>
+<a class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container-high text-green-600" href="#">
+<span class="material-symbols-outlined">chat</span>
+</a>
+<a class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container-high text-on-surface-variant" href="#">
+<span class="material-symbols-outlined">mail</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Provider Card 6 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0_4px_24px_rgba(0,0,0,0.08)] overflow-hidden flex flex-col border border-outline-variant/30 hover:border-primary/30 transition-all duration-300">
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A creative professional woman in a bright, modern studio, using advanced digital tools for design and marketing. She is confident and professional. The studio has large windows allowing for soft natural light, and the interior design is minimalist with pops of primary colors. The visual atmosphere is one of innovation, reliability, and modern professional service." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3wB-egLbyo4P5U-1UM4rcf4vjhsnbq68eoWLwzfknRev-w5t2EK6VuvGM8VAM9QTW2OM-2h34AZtJKIsfMVB_2UGGmXfs_C2E6bGK0KIAruCfrQJFVtjtRHx4BmL9EXYoYFoE9twWPWemJcoehXvOa8hZvQJXPcsz8lN0sLAZNquC7aoBiQqOdQ9hEv7NP39P-JRS9I5ro2doGtAyCSUEfJS4-kRawA9dG2IrzZzEGTYzPdxiDWsGHOrhOJa1swfPDRZwDs_hBEzl"/>
+<div class="absolute top-4 left-4 bg-secondary text-on-secondary px-sm py-xs rounded-lg font-label-sm text-label-sm">مقبول</div>
+</div>
+<div class="p-lg flex flex-col flex-grow text-right">
+<div class="flex justify-between items-start mb-base">
+<h3 class="font-headline-md text-headline-md text-on-surface">ريم الفوزان</h3>
+<div class="flex items-center text-tertiary">
+<span class="font-label-lg text-label-lg ml-1">4.9</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<span class="text-primary font-label-lg text-label-lg mb-md">خبير تسويق رقمي</span>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg line-clamp-2">إدارة الحملات الإعلانية الناجحة وزيادة الوعي بالعلامة التجارية عبر منصات التواصل الاجتماعي.</p>
+<div class="flex items-center justify-between mt-auto pt-md border-t border-outline-variant/30">
+<div class="text-on-surface font-headline-md text-headline-md">
+                            ٢٠٠ <span class="text-label-sm">ر.س/ساعة</span>
+</div>
+<div class="flex gap-sm">
+<a class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container-high text-primary" href="#">
+<span class="material-symbols-outlined">call</span>
+</a>
+<a class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container-high text-green-600" href="#">
+<span class="material-symbols-outlined">chat</span>
+</a>
+<a class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container-high text-on-surface-variant" href="#">
+<span class="material-symbols-outlined">mail</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-xxl flex justify-center items-center gap-md">
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant text-on-surface-variant hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-primary text-on-primary font-label-lg text-label-lg">1</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant text-on-surface-variant hover:bg-surface-container-high transition-colors">2</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant text-on-surface-variant hover:bg-surface-container-high transition-colors">3</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant text-on-surface-variant hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+</div>
+</main>
+<!-- Footer Component -->
+<footer class="bg-surface-container-highest dark:bg-surface-dim full-width border-t border-outline-variant dark:border-outline">
+<div class="flex flex-col w-full py-xxl px-margin-desktop max-w-[1200px] mx-auto text-right px-4 md:px-0">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-xl mb-xl">
+<div>
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim mb-4">زاجل</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        منصة رائدة تهدف إلى ربط طالبي الخدمات بنخبة من المزودين المعتمدين في مختلف المجالات لضمان جودة وسرعة التنفيذ.
+                    </p>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-primary mb-md">روابط سريعة</h4>
+<ul class="space-y-sm font-body-md text-body-md text-on-surface-variant">
+<li><a class="hover:underline decoration-primary" href="#">الرئيسية</a></li>
+<li><a class="hover:underline decoration-primary" href="#">عن المنصة</a></li>
+<li><a class="hover:underline decoration-primary" href="#">الأسئلة الشائعة</a></li>
+<li><a class="hover:underline decoration-primary" href="#">سياسة الخصوصية</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-primary mb-md">خدماتنا</h4>
+<ul class="space-y-sm font-body-md text-body-md text-on-surface-variant">
+<li><a class="hover:underline decoration-primary" href="#">الاستشارات</a></li>
+<li><a class="hover:underline decoration-primary" href="#">التطوير البرمجي</a></li>
+<li><a class="hover:underline decoration-primary" href="#">التسويق</a></li>
+<li><a class="hover:underline decoration-primary" href="#">التصميم</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-primary mb-md">تواصل معنا</h4>
+<ul class="space-y-sm font-body-md text-body-md text-on-surface-variant">
+<li class="flex items-center justify-end gap-sm">
+<span>info@zagel.com</span>
+<span class="material-symbols-outlined text-[18px]">mail</span>
+</li>
+<li class="flex items-center justify-end gap-sm">
+<span>+966 500 000 000</span>
+<span class="material-symbols-outlined text-[18px]">call</span>
+</li>
+</ul>
+<div class="flex justify-end gap-md mt-lg">
+<a class="text-primary hover:opacity-100 opacity-80 transition-opacity" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-primary hover:opacity-100 opacity-80 transition-opacity" href="#"><span class="material-symbols-outlined">group</span></a>
+<a class="text-primary hover:opacity-100 opacity-80 transition-opacity" href="#"><span class="material-symbols-outlined">share</span></a>
+</div>
+</div>
+</div>
+<div class="border-t border-outline-variant pt-lg text-center md:text-right">
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2024 زاجل. جميع الحقوق محفوظة. منصة الخدمات الموثوقة.</p>
+</div>
+</div>
+</footer>
+</body></html>

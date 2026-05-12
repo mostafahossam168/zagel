@@ -179,6 +179,93 @@
                         </label>
                     </div>
                 </div>
+                <div class="col-12 col-md-4">
+                    <div class="inp-holder">
+                        <label class="special-input">
+                            <span>يوتيوب</span>
+                            <div class="box-input">
+                                <input type="text" name="youtube" value="{{ setting('youtube') }}" id="">
+                                <img src="img/icons/call.png" alt="icon" class="icon">
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="inp-holder">
+                        <label class="special-input">
+                            <span>لينكد إن</span>
+                            <div class="box-input">
+                                <input type="text" name="linkedin" value="{{ setting('linkedin') }}" id="">
+                                <img src="img/icons/call.png" alt="icon" class="icon">
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="inp-holder">
+                        <label class="special-input">
+                            <span>تيك توك</span>
+                            <div class="box-input">
+                                <input type="text" name="tiktok" value="{{ setting('tiktok') }}" id="">
+                                <img src="img/icons/call.png" alt="icon" class="icon">
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="inp-holder">
+                        <label class="special-input">
+                            <span>سناب شات</span>
+                            <div class="box-input">
+                                <input type="text" name="snapchat" value="{{ setting('snapchat') }}" id="">
+                                <img src="img/icons/call.png" alt="icon" class="icon">
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12">
+                    <hr style="opacity: .1;">
+                </div>
+
+                {{-- الهوية البصرية --}}
+                <div class="col-12">
+                    <h6 class="fw-bold mb-3" style="color:#2E5789">
+                        <i class="fa-solid fa-palette me-2"></i> الهوية البصرية (ألوان الموقع)
+                    </h6>
+                </div>
+                <div class="col-6 col-md-3">
+                    <label class="special-label">اللون الرئيسي</label>
+                    <div class="d-flex align-items-center gap-2">
+                        <input type="color" name="primary_color" value="{{ setting('primary_color', '#2E5789') }}"
+                            class="form-control form-control-color" style="width:60px;height:42px;cursor:pointer">
+                        <span class="small text-muted" id="primaryColorVal">{{ setting('primary_color', '#2E5789') }}</span>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <label class="special-label">اللون الثانوي</label>
+                    <div class="d-flex align-items-center gap-2">
+                        <input type="color" name="secondary_color" value="{{ setting('secondary_color', '#0FC859') }}"
+                            class="form-control form-control-color" style="width:60px;height:42px;cursor:pointer">
+                        <span class="small text-muted" id="secondaryColorVal">{{ setting('secondary_color', '#0FC859') }}</span>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <label class="special-label">لون التميز</label>
+                    <div class="d-flex align-items-center gap-2">
+                        <input type="color" name="accent_color" value="{{ setting('accent_color', '#F99132') }}"
+                            class="form-control form-control-color" style="width:60px;height:42px;cursor:pointer">
+                        <span class="small text-muted" id="accentColorVal">{{ setting('accent_color', '#F99132') }}</span>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <label class="special-label">اللون الداكن</label>
+                    <div class="d-flex align-items-center gap-2">
+                        <input type="color" name="dark_color" value="{{ setting('dark_color', '#243848') }}"
+                            class="form-control form-control-color" style="width:60px;height:42px;cursor:pointer">
+                        <span class="small text-muted" id="darkColorVal">{{ setting('dark_color', '#243848') }}</span>
+                    </div>
+                </div>
+
                 <div class="col-12 col-md-12">
                     <hr style="opacity: .1;">
                 </div>
@@ -215,3 +302,17 @@
         </form>
     </div>
 @endsection
+
+@push('scripts')
+<script>
+    ['primary_color','secondary_color','accent_color','dark_color'].forEach(name => {
+        const input = document.querySelector(`input[name="${name}"]`);
+        const label = document.getElementById(name.replace('_color','') + 'ColorVal') ||
+                      document.getElementById(name.replace('_','') + 'Val');
+        if (!input) return;
+        input.addEventListener('input', () => {
+            if (label) label.textContent = input.value;
+        });
+    });
+</script>
+@endpush

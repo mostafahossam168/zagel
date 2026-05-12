@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html class="light" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary": "#ffffff",
+                        "tertiary": "#563900",
+                        "on-secondary-container": "#00722f",
+                        "on-surface": "#1a1c1f",
+                        "on-primary-fixed": "#001c39",
+                        "secondary-fixed": "#68ff8b",
+                        "tertiary-container": "#744e00",
+                        "surface": "#f9f9fe",
+                        "secondary": "#006e2d",
+                        "on-error-container": "#93000a",
+                        "outline": "#737780",
+                        "on-tertiary-fixed": "#281800",
+                        "secondary-fixed-dim": "#3fe26f",
+                        "inverse-surface": "#2f3034",
+                        "surface-tint": "#386092",
+                        "surface-variant": "#e2e2e7",
+                        "on-surface-variant": "#43474f",
+                        "surface-bright": "#f9f9fe",
+                        "on-background": "#1a1c1f",
+                        "tertiary-fixed-dim": "#f3be6b",
+                        "primary": "#0f3f70",
+                        "on-secondary-fixed-variant": "#005320",
+                        "background": "#f9f9fe",
+                        "primary-fixed": "#d4e3ff",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed": "#ffddaf",
+                        "surface-container": "#eeedf2",
+                        "error-container": "#ffdad6",
+                        "primary-fixed-dim": "#a4c9ff",
+                        "on-tertiary-fixed-variant": "#614000",
+                        "primary-container": "#2e5789",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed-variant": "#1c4879",
+                        "surface-container-low": "#f3f3f8",
+                        "inverse-on-surface": "#f1f0f5",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-container": "#accdff",
+                        "outline-variant": "#c3c6d0",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-container": "#f7c26f",
+                        "secondary-container": "#5ffd86",
+                        "on-primary": "#ffffff",
+                        "inverse-primary": "#a4c9ff",
+                        "surface-container-high": "#e8e8ec",
+                        "on-secondary-fixed": "#002108",
+                        "surface-container-highest": "#e2e2e7",
+                        "surface-dim": "#dad9de"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "10px",
+                        "xl": "12px",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "xl": "32px",
+                        "xs": "4px",
+                        "grid-columns": "12",
+                        "lg": "24px",
+                        "xxl": "48px",
+                        "margin-mobile": "16px",
+                        "md": "16px",
+                        "sm": "8px",
+                        "base": "4px",
+                        "margin-desktop": "auto"
+                    },
+                    "fontFamily": {
+                        "label-lg": ["Cairo"],
+                        "body-md": ["Cairo"],
+                        "display-md": ["Cairo"],
+                        "headline-lg-mobile": ["Cairo"],
+                        "display-lg": ["Cairo"],
+                        "body-lg": ["Cairo"],
+                        "headline-md": ["Cairo"],
+                        "headline-lg": ["Cairo"],
+                        "label-sm": ["Cairo"]
+                    },
+                    "fontSize": {
+                        "label-lg": ["14px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-md": ["36px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "headline-lg": ["28px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Cairo', sans-serif; background-color: #f9f9fe; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .card-shadow { box-shadow: 0 4px 24px rgba(0,0,0,0.08); }
+    </style>
+</head>
+<body class="bg-background text-on-surface">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-inverse-surface shadow-md docked full-width top-0 z-50 sticky">
+<nav class="flex flex-row-reverse justify-between items-center w-full px-margin-mobile md:px-xl max-w-[1200px] mx-auto h-20">
+<div class="flex items-center gap-4">
+<span class="font-headline-lg text-headline-lg font-bold text-primary dark:text-primary-fixed-dim">زاجل</span>
+</div>
+<div class="hidden md:flex flex-row-reverse items-center gap-8">
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="#">الرئيسية</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="#">الخدمات</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="#">مزودي الخدمة</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="#">أضف مشروعك</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="#">عن زاجل</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="#">تواصل معنا</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-label-lg text-label-lg scale-95 active:scale-90 transition-transform">تسجيل الدخول</button>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+</header>
+<main class="max-w-[1200px] mx-auto px-margin-mobile md:px-xl py-xl">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Left Sidebar -->
+<aside class="md:col-span-4 lg:col-span-3">
+<div class="bg-surface-container-lowest rounded-lg card-shadow p-xl flex flex-col items-center text-center">
+<div class="relative mb-md">
+<img alt="User Avatar" class="w-32 h-32 rounded-full object-cover border-4 border-surface-container" data-alt="A professional portrait of a confident middle-eastern man in a sharp blue business suit, looking directly at the camera with a warm, reliable smile. The background is a soft-focus corporate office with bright, natural lighting that emphasizes a clean and trustworthy professional atmosphere. The image is framed in a perfect circle with a subtle primary color border, maintaining a premium light-mode aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAH36j4IW4kGt1i490J5oKNBWczdNqckD1yrX_BJ3-TF5iwvW3BGnzG29WVceUqoZb3E-mnA8Syl4yyt5ZnMAg6k1sCYbuRxBjbTULC6fdnxOkToNsL2ndS5cJHEFW-eyKOaX-dXkUfcfTYdxJY_NbQPWo2IZYTB3Lo8U69U9Nrv30jojFx3Yyirdu_3bQkMJfVOh-IGlGUHwM3p1RKfCr_nXSaUu0Z7fBGxQFs73sa0cCwK5UsbtZ2hqkitCXPBXRlKq0WVLPraw7Q"/>
+<button class="absolute bottom-1 right-1 bg-primary text-on-primary p-1.5 rounded-full shadow-lg">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-xs">أحمد محمد</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg">ahmed.m@example.com</p>
+<button class="w-full bg-primary-container text-on-primary-container py-3 rounded-lg font-label-lg text-label-lg mb-xl transition-transform active:scale-95">
+                        تعديل الملف الشخصي
+                    </button>
+<div class="w-full space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg bg-primary-fixed text-primary font-bold" href="#">
+<span class="material-symbols-outlined" data-weight="fill">person</span>
+<span class="font-label-lg text-label-lg">ملفي</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-colors" href="#">
+<span class="material-symbols-outlined">work</span>
+<span class="font-label-lg text-label-lg">خدماتي</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-colors" href="#">
+<span class="material-symbols-outlined">notifications</span>
+<span class="font-label-lg text-label-lg">الإشعارات</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-error hover:bg-error-container transition-colors mt-8" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span class="font-label-lg text-label-lg">تسجيل الخروج</span>
+</a>
+</div>
+</div>
+</aside>
+<!-- Right Section: Profile Edit Form -->
+<section class="md:col-span-8 lg:col-span-9">
+<div class="bg-surface-container-lowest rounded-lg card-shadow p-xl mb-gutter">
+<h3 class="font-headline-md text-headline-md text-primary mb-xl border-r-4 border-primary pr-4 leading-none">تعديل الملف الشخصي</h3>
+<form class="space-y-lg">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+<div class="flex flex-col gap-sm">
+<label class="font-label-lg text-label-lg text-on-surface-variant">الاسم الكامل</label>
+<input class="bg-surface-container-low border-none rounded-lg p-3 focus:ring-2 focus:ring-primary font-body-md text-body-md text-on-surface" type="text" value="أحمد محمد"/>
+</div>
+<div class="flex flex-col gap-sm">
+<label class="font-label-lg text-label-lg text-on-surface-variant">البريد الإلكتروني</label>
+<input class="bg-surface-container-low border-none rounded-lg p-3 focus:ring-2 focus:ring-primary font-body-md text-body-md text-on-surface" type="email" value="ahmed.m@example.com"/>
+</div>
+<div class="flex flex-col gap-sm">
+<label class="font-label-lg text-label-lg text-on-surface-variant">رقم الجوال</label>
+<input class="bg-surface-container-low border-none rounded-lg p-3 focus:ring-2 focus:ring-primary font-body-md text-body-md text-on-surface text-right" dir="ltr" type="tel" value="+966 500 000 000"/>
+</div>
+</div>
+<div class="pt-lg border-t border-outline-variant">
+<h4 class="font-label-lg text-label-lg text-on-surface-variant mb-lg">تغيير كلمة المرور</h4>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+<div class="flex flex-col gap-sm">
+<label class="font-label-lg text-label-lg text-on-surface-variant">كلمة المرور الجديدة</label>
+<input class="bg-surface-container-low border-none rounded-lg p-3 focus:ring-2 focus:ring-primary font-body-md text-body-md" placeholder="********" type="password"/>
+</div>
+<div class="flex flex-col gap-sm">
+<label class="font-label-lg text-label-lg text-on-surface-variant">تأكيد كلمة المرور</label>
+<input class="bg-surface-container-low border-none rounded-lg p-3 focus:ring-2 focus:ring-primary font-body-md text-body-md" placeholder="********" type="password"/>
+</div>
+</div>
+</div>
+<div class="flex justify-end pt-lg">
+<button class="bg-primary text-on-primary px-xxl py-3 rounded-lg font-label-lg text-label-lg hover:shadow-lg transition-all active:scale-95" type="submit">
+                                حفظ التغييرات
+                            </button>
+</div>
+</form>
+</div>
+<!-- Bottom Section: Services Table -->
+<div class="bg-surface-container-lowest rounded-lg card-shadow p-xl overflow-hidden">
+<div class="flex justify-between items-center mb-xl">
+<h3 class="font-headline-md text-headline-md text-primary border-r-4 border-primary pr-4 leading-none">خدماتي المقدمة</h3>
+<a class="text-primary font-label-lg text-label-lg hover:underline" href="#">عرض الكل</a>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-right">
+<thead>
+<tr class="border-b border-outline-variant">
+<th class="pb-lg font-label-lg text-label-lg text-on-surface-variant px-md">اسم الخدمة</th>
+<th class="pb-lg font-label-lg text-label-lg text-on-surface-variant px-md">تاريخ الطلب</th>
+<th class="pb-lg font-label-lg text-label-lg text-on-surface-variant px-md">الحالة</th>
+<th class="pb-lg font-label-lg text-label-lg text-on-surface-variant px-md">الإجراءات</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant">
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-lg px-md font-body-md text-body-md text-on-surface">استشارة قانونية عقارية</td>
+<td class="py-lg px-md font-body-md text-body-md text-on-surface">15 أكتوبر 2024</td>
+<td class="py-lg px-md">
+<span class="inline-flex items-center px-3 py-1 rounded-full bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm">مقبول</span>
+</td>
+<td class="py-lg px-md">
+<button class="text-primary-container hover:underline font-label-sm text-label-sm">تفاصيل</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-lg px-md font-body-md text-body-md text-on-surface">تصميم هوية بصرية متكاملة</td>
+<td class="py-lg px-md font-body-md text-body-md text-on-surface">12 أكتوبر 2024</td>
+<td class="py-lg px-md">
+<span class="inline-flex items-center px-3 py-1 rounded-full bg-tertiary-fixed text-tertiary font-label-sm text-label-sm">معلق</span>
+</td>
+<td class="py-lg px-md">
+<button class="text-primary-container hover:underline font-label-sm text-label-sm">تفاصيل</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-lg px-md font-body-md text-body-md text-on-surface">ترجمة وثائق رسمية</td>
+<td class="py-lg px-md font-body-md text-body-md text-on-surface">08 أكتوبر 2024</td>
+<td class="py-lg px-md">
+<span class="inline-flex items-center px-3 py-1 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">مرفوض</span>
+</td>
+<td class="py-lg px-md">
+<button class="text-primary-container hover:underline font-label-sm text-label-sm">تفاصيل</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-surface-dim border-t border-outline-variant dark:border-outline mt-xxl">
+<div class="flex flex-col w-full py-xxl px-margin-mobile md:px-xl max-w-[1200px] mx-auto text-right">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-xl mb-xxl">
+<div class="col-span-1 md:col-span-1">
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim mb-4">زاجل</div>
+<p class="font-body-md text-body-md text-on-surface-variant">منصة الخدمات الموثوقة لربط العملاء بأفضل مقدمي الخدمات المحترفين في المنطقة.</p>
+</div>
+<div>
+<h5 class="font-label-lg text-label-lg text-primary mb-md">روابط سريعة</h5>
+<ul class="space-y-sm">
+<li><a class="font-label-sm text-label-sm text-on-surface-variant hover:underline decoration-primary" href="#">من نحن</a></li>
+<li><a class="font-label-sm text-label-sm text-on-surface-variant hover:underline decoration-primary" href="#">الأسئلة الشائعة</a></li>
+<li><a class="font-label-sm text-label-sm text-on-surface-variant hover:underline decoration-primary" href="#">سياسة الخصوصية</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-lg text-label-lg text-primary mb-md">خدماتنا</h5>
+<ul class="space-y-sm">
+<li><a class="font-label-sm text-label-sm text-on-surface-variant hover:underline decoration-primary" href="#">خدمات تقنية</a></li>
+<li><a class="font-label-sm text-label-sm text-on-surface-variant hover:underline decoration-primary" href="#">استشارات قانونية</a></li>
+<li><a class="font-label-sm text-label-sm text-on-surface-variant hover:underline decoration-primary" href="#">ترجمة ولغات</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-lg text-label-lg text-primary mb-md">تواصل معنا</h5>
+<ul class="space-y-sm">
+<li class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">mail</span>
+<span class="font-label-sm text-label-sm">info@zagel.com</span>
+</li>
+<li class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">phone</span>
+<span class="font-label-sm text-label-sm">+966 800 123 456</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="pt-xl border-t border-outline-variant flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-label-sm text-label-sm text-on-surface-variant opacity-80">© 2024 زاجل. جميع الحقوق محفوظة. منصة الخدمات الموثوقة.</p>
+<div class="flex gap-4">
+<a class="text-primary hover:opacity-100 transition-opacity opacity-80" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-primary hover:opacity-100 transition-opacity opacity-80" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

@@ -15,7 +15,6 @@ class AuthController extends Controller
         if (auth()->attempt($credenation, $remember) && auth()->user()->type->value == 'admin') {
             return redirect()->route('dashboard.home');
         }
-
         return redirect()->back()->with('error', 'البيانات غير صحيحه');
     }
     public function logout(Request $request)

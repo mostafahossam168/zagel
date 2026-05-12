@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>زاجل - قائمة الخدمات</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary": "#ffffff",
+                      "tertiary": "#563900",
+                      "on-secondary-container": "#00722f",
+                      "on-surface": "#1a1c1f",
+                      "on-primary-fixed": "#001c39",
+                      "secondary-fixed": "#68ff8b",
+                      "tertiary-container": "#744e00",
+                      "surface": "#f9f9fe",
+                      "secondary": "#006e2d",
+                      "on-error-container": "#93000a",
+                      "outline": "#737780",
+                      "on-tertiary-fixed": "#281800",
+                      "secondary-fixed-dim": "#3fe26f",
+                      "inverse-surface": "#2f3034",
+                      "surface-tint": "#386092",
+                      "surface-variant": "#e2e2e7",
+                      "on-surface-variant": "#43474f",
+                      "surface-bright": "#f9f9fe",
+                      "on-background": "#1a1c1f",
+                      "tertiary-fixed-dim": "#f3be6b",
+                      "primary": "#0f3f70",
+                      "on-secondary-fixed-variant": "#005320",
+                      "background": "#f9f9fe",
+                      "primary-fixed": "#d4e3ff",
+                      "error": "#ba1a1a",
+                      "tertiary-fixed": "#ffddaf",
+                      "surface-container": "#eeedf2",
+                      "error-container": "#ffdad6",
+                      "primary-fixed-dim": "#a4c9ff",
+                      "on-tertiary-fixed-variant": "#614000",
+                      "primary-container": "#2e5789",
+                      "on-error": "#ffffff",
+                      "on-primary-fixed-variant": "#1c4879",
+                      "surface-container-low": "#f3f3f8",
+                      "inverse-on-surface": "#f1f0f5",
+                      "surface-container-lowest": "#ffffff",
+                      "on-primary-container": "#accdff",
+                      "outline-variant": "#c3c6d0",
+                      "on-tertiary": "#ffffff",
+                      "on-tertiary-container": "#f7c26f",
+                      "secondary-container": "#5ffd86",
+                      "on-primary": "#ffffff",
+                      "inverse-primary": "#a4c9ff",
+                      "surface-container-high": "#e8e8ec",
+                      "on-secondary-fixed": "#002108",
+                      "surface-container-highest": "#e2e2e7",
+                      "surface-dim": "#dad9de"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "xl": "32px",
+                      "xs": "4px",
+                      "grid-columns": "12",
+                      "lg": "24px",
+                      "xxl": "48px",
+                      "margin-mobile": "16px",
+                      "md": "16px",
+                      "sm": "8px",
+                      "base": "4px",
+                      "margin-desktop": "auto"
+              },
+              "fontFamily": {
+                      "label-lg": ["Cairo"],
+                      "body-md": ["Cairo"],
+                      "display-md": ["Cairo"],
+                      "headline-lg-mobile": ["Cairo"],
+                      "display-lg": ["Cairo"],
+                      "body-lg": ["Cairo"],
+                      "headline-md": ["Cairo"],
+                      "headline-lg": ["Cairo"],
+                      "label-sm": ["Cairo"]
+              },
+              "fontSize": {
+                      "label-lg": ["14px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "display-md": ["36px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                      "headline-lg-mobile": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                      "display-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                      "headline-lg": ["28px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                      "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface">
+<!-- TopNavBar -->
+<nav class="bg-surface dark:bg-inverse-surface shadow-md docked full-width top-0 z-50 sticky">
+<div class="flex flex-row-reverse justify-between items-center w-full px-margin-desktop max-w-[1200px] mx-auto h-20">
+<div class="flex items-center gap-xl">
+<span class="font-headline-lg text-headline-lg font-bold text-primary dark:text-primary-fixed-dim">زاجل</span>
+<div class="hidden md:flex flex-row-reverse gap-lg items-center">
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 font-label-lg text-label-lg" href="#">الرئيسية</a>
+<a class="text-primary dark:text-primary-fixed-dim font-bold border-b-2 border-primary dark:border-primary-fixed-dim pb-1 font-label-lg text-label-lg" href="#">الخدمات</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 font-label-lg text-label-lg" href="#">مزودي الخدمة</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 font-label-lg text-label-lg" href="#">أضف مشروعك</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 font-label-lg text-label-lg" href="#">عن زاجل</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 font-label-lg text-label-lg" href="#">تواصل معنا</a>
+</div>
+</div>
+<div class="flex items-center gap-md">
+<button class="bg-primary-container text-on-primary-container px-lg py-sm rounded-lg font-label-lg text-label-lg scale-95 active:scale-90 transition-transform">تسجيل الدخول</button>
+</div>
+</div>
+</nav>
+<main class="max-w-[1200px] mx-auto px-margin-mobile md:px-0 py-xl">
+<!-- Breadcrumbs -->
+<nav aria-label="Breadcrumb" class="flex items-center gap-xs mb-lg text-on-surface-variant">
+<a class="font-label-sm text-label-sm hover:text-primary transition-colors" href="#">الرئيسية</a>
+<span class="material-symbols-outlined text-[16px] transform rotate-180">chevron_left</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">استكشاف الخدمات</span>
+</nav>
+<!-- Header Section -->
+<header class="mb-xxl">
+<h1 class="font-display-md text-display-md text-primary mb-sm">استكشف الخدمات المتميزة</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">اختر من بين مئات الخدمات الاحترافية المقدمة من أفضل الخبراء في السوق، مصممة لتلبية تطلعاتك بجودة استثنائية.</p>
+</header>
+<!-- Filter Bar -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm p-lg mb-xxl grid grid-cols-1 md:grid-cols-12 gap-lg items-end">
+<div class="md:col-span-4">
+<label class="block font-label-lg text-label-lg mb-sm text-on-surface-variant">بحث عن خدمة</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute right-md top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full pr-[44px] pl-md py-sm bg-surface-container-low border-none rounded-lg focus:ring-2 focus:ring-primary font-body-md text-body-md" placeholder="ما الذي تبحث عنه؟" type="text"/>
+</div>
+</div>
+<div class="md:col-span-3">
+<label class="block font-label-lg text-label-lg mb-sm text-on-surface-variant">الفئة</label>
+<select class="w-full px-md py-sm bg-surface-container-low border-none rounded-lg focus:ring-2 focus:ring-primary font-body-md text-body-md appearance-none">
+<option>كل الفئات</option>
+<option>الاستشارات القانونية</option>
+<option>التصميم والإبداع</option>
+<option>الخدمات اللوجستية</option>
+<option>التطوير التقني</option>
+</select>
+</div>
+<div class="md:col-span-3">
+<label class="block font-label-lg text-label-lg mb-sm text-on-surface-variant">نطاق السعر</label>
+<div class="flex items-center gap-sm">
+<input class="w-full px-md py-sm bg-surface-container-low border-none rounded-lg focus:ring-2 focus:ring-primary font-body-md text-body-md" placeholder="من" type="number"/>
+<span class="text-outline">إلى</span>
+<input class="w-full px-md py-sm bg-surface-container-low border-none rounded-lg focus:ring-2 focus:ring-primary font-body-md text-body-md" placeholder="إلى" type="number"/>
+</div>
+</div>
+<div class="md:col-span-2">
+<button class="w-full bg-primary text-on-primary py-sm rounded-lg font-label-lg text-label-lg flex items-center justify-center gap-sm hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined">filter_list</span>
+                    تطبيق التصفية
+                </button>
+</div>
+</section>
+<!-- Services Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter mb-xxl">
+<!-- Card 1 -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_24px_rgba(0,0,0,0.08)] group hover:-translate-y-1 transition-transform duration-300">
+<div class="h-56 w-full relative">
+<img class="w-full h-full object-cover" data-alt="A professional workspace with a sleek laptop, architectural blueprints, and high-end stationery on a minimalist desk. The environment is bright and airy, reflecting a premium consulting atmosphere with soft natural light. The color palette is composed of professional greys, deep blues, and crisp whites, conveying expertise and organizational excellence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4kbFoNSgxLH-IpBxPHVV5hWJBesjov9ekTL04F0Rc_3vfEFhteP98rRSaT1wQ3NZ3qyEYqe4vI7jiYAKXBVdzPe0DEnS2R9S4I3ZUksAJ4wZ_9HwBNeay61Nvdmijifab8yucg9_i6UGJLLiqFZvz2N13jtiQbIP-aRxtYjb8LPZ-VkVws7b-P0gHXozSoZgZmBdYP61eVZNxPN-LleUHPVn-1zkSbQhPRAgBt7edkuqquD46leTMW0mk-5bgqZTlXayih7nazyk5"/>
+<div class="absolute top-md right-md">
+<span class="bg-secondary text-on-secondary font-label-sm text-label-sm px-md py-xs rounded-full">استشارات</span>
+</div>
+</div>
+<div class="p-lg">
+<h3 class="font-headline-md text-headline-md text-primary mb-xs group-hover:text-primary-container transition-colors">استشارات تطوير الأعمال التجارية</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg line-clamp-2">نقدم حلولاً استراتيجية متكاملة لتوسيع نطاق أعمالك في السوق المحلي والإقليمي مع دراسة جدوى معمقة.</p>
+<div class="flex items-center justify-between pt-lg border-t border-outline-variant">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">تبدأ من</span>
+<span class="font-headline-lg text-headline-lg text-primary font-bold">1,200 ر.س</span>
+</div>
+<button class="bg-primary-fixed text-on-primary-fixed-variant p-sm rounded-lg hover:bg-primary-container hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_24px_rgba(0,0,0,0.08)] group hover:-translate-y-1 transition-transform duration-300">
+<div class="h-56 w-full relative">
+<img class="w-full h-full object-cover" data-alt="Close-up of a modern graphic tablet and a digital stylus pen on a designer's desk. The scene is illuminated by vibrant neon accent lights reflecting on clean surfaces, creating a creative and technologically advanced mood. Bold primary colors and deep blacks dominate the aesthetic, suggesting a high-end digital design studio environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiOCKIyj4XjyqGPtMP6KTQ6MLWzdol5qOOfPCljDbNlDEAIYnOKyr0_liRj-1C3gPyhJL0AAbaVPKyeKDboeXziV9Hq6kuiyyxEw18yY_QdOKVdjZ-9CFdYwOnFwoRSQoUBdXQSOBbYiiQQQi1Dzbh9RY-H9LEbg1krr_2uIqNGTFsu44C-JZxd1cQpS54-vkNrdFoEfcRCuNyPgYSw-szeJv3CDIV-yKuEtoVJkaY6WUYeQIzWySKgWFYFeO2srRQgnKwalNv7eiy"/>
+<div class="absolute top-md right-md">
+<span class="bg-primary-container text-on-primary-container font-label-sm text-label-sm px-md py-xs rounded-full">تصميم</span>
+</div>
+</div>
+<div class="p-lg">
+<h3 class="font-headline-md text-headline-md text-primary mb-xs group-hover:text-primary-container transition-colors">تصميم الهوية البصرية المتكاملة</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg line-clamp-2">بناء هوية بصرية قوية تعبر عن قيم مشروعك وتجذب جمهورك المستهدف بلمسات فنية واحترافية.</p>
+<div class="flex items-center justify-between pt-lg border-t border-outline-variant">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">تبدأ من</span>
+<span class="font-headline-lg text-headline-lg text-primary font-bold">3,500 ر.س</span>
+</div>
+<button class="bg-primary-fixed text-on-primary-fixed-variant p-sm rounded-lg hover:bg-primary-container hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_24px_rgba(0,0,0,0.08)] group hover:-translate-y-1 transition-transform duration-300">
+<div class="h-56 w-full relative">
+<img class="w-full h-full object-cover" data-alt="A sophisticated legal office setting with leather-bound books, a wooden gavel, and elegant scales of justice. The room is bathed in warm, cinematic lighting that highlights rich textures and golden brass details. The overall aesthetic is formal, traditional, and deeply professional, using a palette of mahogany, gold, and deep charcoal." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnACccbboq7urrNANNcYrbc60HF_xHqlyAFxVoVRgIzE46Cp4FwX9SOMZJt23f39m5kIN_nPNKSK17R5v1xUhc23suazrXO01ZqRwWm1bWoa7f_Pc-uRY4GPiAyJcV_L0p7uBlIb0X4tsxZkjmyEePs08lAp7sl2emaGYr2VwNxHg-qEZJ78cCvyB6j2voxfuqvfisPhotKX_CpbIR0ujvBmwfG6n242h6LbcHqpCH-z2oIrSDZXVL8IJwf1Loa1FmUGeGwi_VIyTN"/>
+<div class="absolute top-md right-md">
+<span class="bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm px-md py-xs rounded-full">قانوني</span>
+</div>
+</div>
+<div class="p-lg">
+<h3 class="font-headline-md text-headline-md text-primary mb-xs group-hover:text-primary-container transition-colors">صياغة العقود والاتفاقيات القانونية</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg line-clamp-2">خدمة قانونية متخصصة في صياغة ومراجعة كافة أنواع العقود التجارية والمدنية لضمان حقوقك القانونية.</p>
+<div class="flex items-center justify-between pt-lg border-t border-outline-variant">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">تبدأ من</span>
+<span class="font-headline-lg text-headline-lg text-primary font-bold">800 ر.س</span>
+</div>
+<button class="bg-primary-fixed text-on-primary-fixed-variant p-sm rounded-lg hover:bg-primary-container hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 4 -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_24px_rgba(0,0,0,0.08)] group hover:-translate-y-1 transition-transform duration-300">
+<div class="h-56 w-full relative">
+<img class="w-full h-full object-cover" data-alt="A modern data analysis dashboard displayed on a large high-resolution monitor in a dark, tech-oriented office. Multiple charts, graphs, and heatmaps glow in vibrant blues and cyans against a dark background. The lighting is low-key with focused cool-toned accents, suggesting a high-performance analytics and marketing operations center." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJUnZWQZwb3xVsKEfLRNaVsdFSfp1SUJLtX5kJ73n6ck3kmLaR3hK77JZYgewFHUfpRfK67C6ARURbUfP7OTjteGncTkL4hKuqKbBvO05o9B05i3p_gsPjXuBKnI1bxkGcgfnqr2_RQX2DODY6gM2Fh0YqNiQq1O2foUIBAA0qQOrE_jrwd46ZDQWEmsBahY4mpaiTpAAZUI6J5NOMQaLqAEziufAvrPteq87UYSsk-XxzJ_EKc008O7RWBYTTPy-ErI6U8H6y_Dkm"/>
+<div class="absolute top-md right-md">
+<span class="bg-secondary text-on-secondary font-label-sm text-label-sm px-md py-xs rounded-full">تسويق</span>
+</div>
+</div>
+<div class="p-lg">
+<h3 class="font-headline-md text-headline-md text-primary mb-xs group-hover:text-primary-container transition-colors">إدارة الحملات الإعلانية الرقمية</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg line-clamp-2">خطة تسويقية شاملة لزيادة مبيعاتك عبر منصات التواصل الاجتماعي ومحركات البحث باستهداف دقيق.</p>
+<div class="flex items-center justify-between pt-lg border-t border-outline-variant">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">تبدأ من</span>
+<span class="font-headline-lg text-headline-lg text-primary font-bold">2,000 ر.س</span>
+</div>
+<button class="bg-primary-fixed text-on-primary-fixed-variant p-sm rounded-lg hover:bg-primary-container hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 5 -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_24px_rgba(0,0,0,0.08)] group hover:-translate-y-1 transition-transform duration-300">
+<div class="h-56 w-full relative">
+<img class="w-full h-full object-cover" data-alt="A bright, modern industrial laboratory where a professional in a white coat is inspecting high-tech components. The setting is sterile and clean, illuminated by clinical white lights that emphasize precision and quality control. The aesthetic is futuristic and high-end, utilizing a palette of silver, white, and subtle blue light accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEgfi1xrpsudY3hC000kMMeQJw_jCR8M9NMnoHC5LT5hSAby5ynHn0e14M994QSUz9iikOSmUATZzWzm4LB40C8KJN3Lz3K4Xn86I-BdQKHx1fYjCRKSQBnyG99OlJnNE_2Gr34iFvV4YQqjCnWR3gy19Zr-jMCkjg3968cvqwS8DhAizfcBVLTOHQUF1oij-TgqjiSIJsy6c5IU_0icv0g7c6zROAZdMimaD2EjAaPUgqZ_pT8wA4QyX9MjUDkH80ziYm9VwQ_6PZ"/>
+<div class="absolute top-md right-md">
+<span class="bg-primary-container text-on-primary-container font-label-sm text-label-sm px-md py-xs rounded-full">تقني</span>
+</div>
+</div>
+<div class="p-lg">
+<h3 class="font-headline-md text-headline-md text-primary mb-xs group-hover:text-primary-container transition-colors">تطوير تطبيقات الجوال الذكية</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg line-clamp-2">برمجة وتصميم تطبيقات (iOS &amp; Android) بأحدث التقنيات مع تجربة مستخدم سلسة وعصرية.</p>
+<div class="flex items-center justify-between pt-lg border-t border-outline-variant">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">تبدأ من</span>
+<span class="font-headline-lg text-headline-lg text-primary font-bold">15,000 ر.س</span>
+</div>
+<button class="bg-primary-fixed text-on-primary-fixed-variant p-sm rounded-lg hover:bg-primary-container hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 6 -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_24px_rgba(0,0,0,0.08)] group hover:-translate-y-1 transition-transform duration-300">
+<div class="h-56 w-full relative">
+<img class="w-full h-full object-cover" data-alt="A bright corporate meeting room with individuals engaged in a strategic discussion around a large wooden table. Through large windows, a city skyline is visible in soft focus. The atmosphere is professional and collaborative, with natural daylight creating a warm, productive environment. The color scheme features professional blues, tans, and neutral whites." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0c48lN-r-wQpKNeN39UxTo5v0v_gOlbOzxNnNInGr0hJxiRrcUUQyyFf4-tamp1FPdjzuGvDTx6flD03QMZEJbM2z0FBhRop6HlToEYNzvyieriR73NsQF06H5vcm3J2ECUDutngwAHD92aPvt7SxV9mlyv4c1Rm72ikjcSHpzoGSeesKg3ACkIEXqVOXatzlP9qdSmt9e3Y7YfNL-1fkjDIfCX6c288NGv0ybcdjbvdIOO1UfIzz9hcKv6AfnPJaa18ti37ydEsH"/>
+<div class="absolute top-md right-md">
+<span class="bg-secondary text-on-secondary font-label-sm text-label-sm px-md py-xs rounded-full">لوجستي</span>
+</div>
+</div>
+<div class="p-lg">
+<h3 class="font-headline-md text-headline-md text-primary mb-xs group-hover:text-primary-container transition-colors">خدمات الشحن والتخليص الجمركي</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg line-clamp-2">حلول لوجستية شاملة لعمليات الاستيراد والتصدير مع سرعة في التنفيذ وتأمين شامل للشحنات.</p>
+<div class="flex items-center justify-between pt-lg border-t border-outline-variant">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">تبدأ من</span>
+<span class="font-headline-lg text-headline-lg text-primary font-bold">500 ر.س</span>
+</div>
+<button class="bg-primary-fixed text-on-primary-fixed-variant p-sm rounded-lg hover:bg-primary-container hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+<!-- Pagination -->
+<nav aria-label="Pagination" class="flex justify-center items-center gap-sm mt-xxl">
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-surface-container text-on-surface hover:bg-primary hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-primary text-on-primary font-label-lg text-label-lg">١</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-surface-container text-on-surface hover:bg-primary-fixed transition-colors font-label-lg text-label-lg">٢</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-surface-container text-on-surface hover:bg-primary-fixed transition-colors font-label-lg text-label-lg">٣</button>
+<span class="text-outline px-sm">...</span>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-surface-container text-on-surface hover:bg-primary-fixed transition-colors font-label-lg text-label-lg">١٠</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-surface-container text-on-surface hover:bg-primary hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+</nav>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-surface-dim border-t border-outline-variant dark:border-outline full-width">
+<div class="flex flex-col w-full py-xxl px-margin-desktop max-w-[1200px] mx-auto text-right">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-xxl mb-xxl">
+<div class="md:col-span-1">
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim mb-4">زاجل</div>
+<p class="font-body-md text-body-md text-on-surface-variant">منصة زاجل هي الوجهة الأولى لربط أصحاب الأعمال بالمحترفين في كافة المجالات لضمان نمو وازدهار مشاريعكم.</p>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-primary mb-lg">روابط سريعة</h4>
+<ul class="space-y-sm">
+<li><a class="text-on-surface-variant hover:underline decoration-primary font-body-md text-body-md opacity-80 hover:opacity-100 transition-opacity" href="#">من نحن</a></li>
+<li><a class="text-on-surface-variant hover:underline decoration-primary font-body-md text-body-md opacity-80 hover:opacity-100 transition-opacity" href="#">الأسئلة الشائعة</a></li>
+<li><a class="text-on-surface-variant hover:underline decoration-primary font-body-md text-body-md opacity-80 hover:opacity-100 transition-opacity" href="#">سياسة الخصوصية</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-primary mb-lg">خدماتنا</h4>
+<ul class="space-y-sm">
+<li><a class="text-on-surface-variant hover:underline decoration-primary font-body-md text-body-md opacity-80 hover:opacity-100 transition-opacity" href="#">تصفح الخدمات</a></li>
+<li><a class="text-on-surface-variant hover:underline decoration-primary font-body-md text-body-md opacity-80 hover:opacity-100 transition-opacity" href="#">طلب عرض سعر</a></li>
+<li><a class="text-on-surface-variant hover:underline decoration-primary font-body-md text-body-md opacity-80 hover:opacity-100 transition-opacity" href="#">برنامج الشركاء</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-primary mb-lg">الشبكات الاجتماعية</h4>
+<div class="flex gap-md">
+<a class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary hover:scale-110 transition-transform" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary hover:scale-110 transition-transform" href="#">
+<span class="material-symbols-outlined">public</span>
+</a>
+</div>
+</div>
+</div>
+<div class="pt-xl border-t border-outline-variant flex flex-col md:flex-row justify-between items-center gap-md">
+<span class="font-body-md text-body-md text-on-surface-variant opacity-80">© 2024 زاجل. جميع الحقوق محفوظة. منصة الخدمات الموثوقة.</span>
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-primary">verified_user</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">مرخص ومعتمد</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

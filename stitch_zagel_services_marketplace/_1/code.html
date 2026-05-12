@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary": "#ffffff",
+                    "tertiary": "#563900",
+                    "on-secondary-container": "#00722f",
+                    "on-surface": "#1a1c1f",
+                    "on-primary-fixed": "#001c39",
+                    "secondary-fixed": "#68ff8b",
+                    "tertiary-container": "#744e00",
+                    "surface": "#f9f9fe",
+                    "secondary": "#006e2d",
+                    "on-error-container": "#93000a",
+                    "outline": "#737780",
+                    "on-tertiary-fixed": "#281800",
+                    "secondary-fixed-dim": "#3fe26f",
+                    "inverse-surface": "#2f3034",
+                    "surface-tint": "#386092",
+                    "surface-variant": "#e2e2e7",
+                    "on-surface-variant": "#43474f",
+                    "surface-bright": "#f9f9fe",
+                    "on-background": "#1a1c1f",
+                    "tertiary-fixed-dim": "#f3be6b",
+                    "primary": "#0f3f70",
+                    "on-secondary-fixed-variant": "#005320",
+                    "background": "#f9f9fe",
+                    "primary-fixed": "#d4e3ff",
+                    "error": "#ba1a1a",
+                    "tertiary-fixed": "#ffddaf",
+                    "surface-container": "#eeedf2",
+                    "error-container": "#ffdad6",
+                    "primary-fixed-dim": "#a4c9ff",
+                    "on-tertiary-fixed-variant": "#614000",
+                    "primary-container": "#2e5789",
+                    "on-error": "#ffffff",
+                    "on-primary-fixed-variant": "#1c4879",
+                    "surface-container-low": "#f3f3f8",
+                    "inverse-on-surface": "#f1f0f5",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-container": "#accdff",
+                    "outline-variant": "#c3c6d0",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-container": "#f7c26f",
+                    "secondary-container": "#5ffd86",
+                    "on-primary": "#ffffff",
+                    "inverse-primary": "#a4c9ff",
+                    "surface-container-high": "#e8e8ec",
+                    "on-secondary-fixed": "#002108",
+                    "surface-container-highest": "#e2e2e7",
+                    "surface-dim": "#dad9de"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "xl": "32px",
+                    "xs": "4px",
+                    "grid-columns": "12",
+                    "lg": "24px",
+                    "xxl": "48px",
+                    "margin-mobile": "16px",
+                    "md": "16px",
+                    "sm": "8px",
+                    "base": "4px",
+                    "margin-desktop": "auto"
+            },
+            "fontFamily": {
+                    "label-lg": ["Cairo"],
+                    "body-md": ["Cairo"],
+                    "display-md": ["Cairo"],
+                    "headline-lg-mobile": ["Cairo"],
+                    "display-lg": ["Cairo"],
+                    "body-lg": ["Cairo"],
+                    "headline-md": ["Cairo"],
+                    "headline-lg": ["Cairo"],
+                    "label-sm": ["Cairo"]
+            },
+            "fontSize": {
+                    "label-lg": ["14px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-md": ["36px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "headline-lg": ["28px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Cairo', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .premium-shadow { box-shadow: 0 4px 24px rgba(0,0,0,0.08); }
+        .hero-gradient { background: linear-gradient(135deg, #0f3f70 0%, #1c4879 100%); }
+        .cta-gradient { background: linear-gradient(90deg, #0f3f70 0%, #2e5789 100%); }
+    </style>
+</head>
+<body class="bg-background text-on-surface">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-inverse-surface shadow-md dock-full-width top-0 z-50 sticky h-20">
+<div class="flex flex-row-reverse justify-between items-center w-full px-4 md:px-xxl max-w-[1200px] mx-auto h-full">
+<div class="font-headline-lg text-headline-lg font-bold text-primary dark:text-primary-fixed-dim">زاجل</div>
+<nav class="hidden md:flex flex-row-reverse gap-xl">
+<a class="text-primary dark:text-primary-fixed-dim font-bold border-b-2 border-primary dark:border-primary-fixed-dim pb-1 hover:text-primary transition-colors duration-200" href="#">الرئيسية</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">الخدمات</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">مزودي الخدمة</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">أضف مشروعك</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">عن زاجل</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">تواصل معنا</a>
+</nav>
+<button class="bg-primary-container text-on-primary px-lg py-sm rounded-lg font-label-lg scale-95 active:scale-90 transition-transform">تسجيل الدخول</button>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="hero-gradient text-on-primary py-xxl overflow-hidden">
+<div class="max-w-[1200px] mx-auto px-4 md:px-xxl flex flex-col md:flex-row-reverse items-center gap-xxl">
+<div class="w-full md:w-1/2 text-right">
+<h1 class="font-display-lg text-display-lg mb-md leading-tight">نربطك بأفضل مزودي الخدمة في المملكة</h1>
+<p class="font-body-lg text-body-lg mb-xl opacity-90">منصة زاجل توفر لك خبراء معتمدين في جميع المجالات لضمان جودة وسرعة تنفيذ أعمالك.</p>
+<div class="flex flex-row-reverse gap-md">
+<button class="bg-on-primary text-primary px-xxl py-md rounded-lg font-label-lg hover:bg-opacity-90 transition-all">استعرض الخدمات</button>
+<button class="border-1.5 border-on-primary text-on-primary border px-xxl py-md rounded-lg font-label-lg hover:bg-white/10 transition-all">أضف مشروعك</button>
+</div>
+</div>
+<div class="w-full md:w-1/2">
+<img class="w-full h-auto rounded-xl" data-alt="A professional 3D digital illustration showing a clean, modern workspace with floating geometric interfaces. The scene uses a deep primary blue color palette with highlights of bright teal and white, creating a high-tech and trustworthy atmosphere typical of a premium Saudi Arabian business platform. Soft, diffused professional studio lighting illuminates the sleek metallic and glass surfaces." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA19Km_5_2_pA4n35nnkmZ2IwLDlTb2Ryl4g9P41gsZUUjS3hy5idxRhXNcVvP8rMoIeiqnHUrionHTu4JrDHEJErjcOxIyXlVOWkOkVS4k2FV578zvlsqhXLIzdDYv-apcELxoUKwEoAJYrwSLnpUK4559rUEaRkrV5QVK9PERQx7V-4OYRnexURVTkmUi5KzGrfe-Zz_ofR5iHueVex3_Y4ss5m0GX6E9K_Kk5weKD1_EOGYc5h8VC_Vbr55gjuy8Vy90TF9rUr_r"/>
+</div>
+</div>
+</section>
+<!-- Stats Bar -->
+<section class="relative -mt-12 z-10 px-4">
+<div class="max-w-[1200px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-lg">
+<div class="bg-surface-container-lowest premium-shadow p-xl rounded-xl text-center">
+<div class="text-primary font-display-md text-display-md mb-xs">500+</div>
+<div class="font-label-lg text-on-surface-variant">عدد الخدمات</div>
+</div>
+<div class="bg-surface-container-lowest premium-shadow p-xl rounded-xl text-center">
+<div class="text-primary font-display-md text-display-md mb-xs">1.2K</div>
+<div class="font-label-lg text-on-surface-variant">مزودي الخدمة</div>
+</div>
+<div class="bg-surface-container-lowest premium-shadow p-xl rounded-xl text-center">
+<div class="text-primary font-display-md text-display-md mb-xs">3K+</div>
+<div class="font-label-lg text-on-surface-variant">المشاريع المنجزة</div>
+</div>
+<div class="bg-surface-container-lowest premium-shadow p-xl rounded-xl text-center">
+<div class="text-primary font-display-md text-display-md mb-xs">98%</div>
+<div class="font-label-lg text-on-surface-variant">عملاء راضون</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-xxl">
+<div class="max-w-[1200px] mx-auto px-4">
+<div class="flex justify-between items-end mb-xl">
+<h2 class="font-headline-lg text-headline-lg text-primary">خدماتنا المميزة</h2>
+<a class="text-primary font-label-lg underline decoration-2" href="#">مشاهدة الكل</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+<!-- Service Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl premium-shadow overflow-hidden group">
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A close-up high-resolution photograph of a professional consultant discussing architectural blueprints over a clean white desk. The lighting is natural and bright, emphasizing a light-mode corporate aesthetic. The overall mood is focused and sophisticated, using a palette of neutral greys and crisp whites with a single deep blue pen as a focal point." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBA_L1uJDPJHe4XEIjPbWfc1949UtzoOy0waItjd4xi2Cto7UDF5iBQHugxj4qWpnaBM3tcc6nLReuU5UZo5_2oLpnx9ILAfJSX8FUQ7p86Wo1stU_e7J25bvTawlJWDWWcVFmYp5zEAxjtS8Rh7tFHPFPl0xrWzmFm_P7VcP3KloEnAaO3fTFAg56nAoCWZo4_8jTtTwKgRrwVa7-v21zznuQ0U24aMQR4GV865DwsENOPsdKVeKPlOK_5VgJD2NcXZaAg4hUf8-g4"/>
+<div class="absolute top-4 right-4 bg-secondary text-on-secondary px-sm py-xs rounded-full text-label-sm">مميز</div>
+</div>
+<div class="p-lg text-right">
+<h3 class="font-headline-md text-headline-md mb-xs">استشارات هندسية</h3>
+<p class="font-body-md text-on-surface-variant mb-md">نخبة من المهندسين المعتمدين لمشروعك.</p>
+<div class="flex justify-between items-center">
+<span class="font-label-lg text-primary">بدءاً من 500 ر.س</span>
+<button class="text-primary font-label-lg flex items-center gap-xs">
+                                    عرض التفاصيل
+                                    <span class="material-symbols-outlined text-[18px]">arrow_back</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Service Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl premium-shadow overflow-hidden group">
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A modern tech workspace featuring a sleek laptop displaying clean lines of computer code on a high-resolution screen. The background is a blurred office environment with soft bokeh lighting in shades of cool white and pale blue. The visual style is minimal and professional, conveying a sense of digital excellence and modern software engineering." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZxnFUKdtczs-eoojMvasE_Pt4AXBKRgziWtthFO2MigpSN_QSSGFgy2WcljZDRM_mM08OD9M5Cc80EhbxM3P1L5OKdqVYC3wcewfZKOUDuKfzpgzQ6XZdCr6JrQn8Zk81cFCetIgQYBdd-YGd2wOIBe3U-C8gE_QlbmWGar-X6TQlwCHk4kUhjknidfT8MLZGy7ojtzU4Mu62eb5YfWa7N99O7pLQYVmsjWXM9cs7N78fhrOpLG0i4JuLoFeXRxn9_E5tirkLN9Ze"/>
+</div>
+<div class="p-lg text-right">
+<h3 class="font-headline-md text-headline-md mb-xs">تطوير تطبيقات</h3>
+<p class="font-body-md text-on-surface-variant mb-md">حلول برمجية مبتكرة لنظامي Android و iOS.</p>
+<div class="flex justify-between items-center">
+<span class="font-label-lg text-primary">بدءاً من 2000 ر.س</span>
+<button class="text-primary font-label-lg flex items-center gap-xs">
+                                    عرض التفاصيل
+                                    <span class="material-symbols-outlined text-[18px]">arrow_back</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Service Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl premium-shadow overflow-hidden group">
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="An elegant graphic designer workspace showing a premium stylus tablet and a high-end monitor with vibrant color palettes and clean geometric logo designs. The room is filled with soft, warm afternoon light coming through a window. The style is creative yet professional, featuring a sophisticated color scheme of deep navy and bright white." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlGIX-1nQJq3CFsuPIKRGDRq7n6zKeA7mcDq_FnI4HvUnYejNBVSSM0lZaDHBuc6QL_ftaGbDxvX281tb49evnmb9iwIWf6b1jtFCHSzWqH0Au_dVNF3nUrf1Ij_DDmTvBavWqchcKYol0cyrlrx2l-VWFozrPmfprtTua_X1NAGf6R6iodfwRpWcYA7Vi5KyFafabCwkmDEz4wHqXXSgfVMzJHufBPAOjy9L8GZUQPXHhKNwDMN9DBDpuvgpjvPLbteQLHBGyM-JG"/>
+</div>
+<div class="p-lg text-right">
+<h3 class="font-headline-md text-headline-md mb-xs">تصميم هوية بصرية</h3>
+<p class="font-body-md text-on-surface-variant mb-md">تصاميم فريدة تعبر عن قيم علامتك التجارية.</p>
+<div class="flex justify-between items-center">
+<span class="font-label-lg text-primary">بدءاً من 1200 ر.س</span>
+<button class="text-primary font-label-lg flex items-center gap-xs">
+                                    عرض التفاصيل
+                                    <span class="material-symbols-outlined text-[18px]">arrow_back</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Additional Cards for Grid (6 Total) -->
+<div class="bg-surface-container-lowest rounded-xl premium-shadow overflow-hidden group">
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A professional accountant's desk featuring a high-end calculator, neatly organized financial documents, and a gold-nibbed fountain pen. The lighting is crisp and overhead, casting soft shadows that emphasize the professional and secure nature of the work. The color palette is composed of business blues, whites, and metallic silver accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbJNpXRE0KsskHbutS5xMULH08ZzLHTcwGDIwp5QjexiP1CkFysRVnJSXnkPsZGooE7ruXzo7yIb_ALuEVe6inkgI-UM_ZNgkLV5BdHL2CkWTrjWyzmngatY0nE_6sdqvm8VsVGEpEYnDlBrnZUoIRyt1NI6swGiB-OK5isiMVBVZp1VlGCjIR2AZ02cjERRnREVo3NkLkVRxK1Mr5Rn2_oBgPU4C2L4tCaMS8MFqSkKNSGm1CzKPTYyiFOf1oAHIssgFabPSlReIi"/>
+</div>
+<div class="p-lg text-right">
+<h3 class="font-headline-md text-headline-md mb-xs">خدمات محاسبية</h3>
+<p class="font-body-md text-on-surface-variant mb-md">إدارة مالية دقيقة لمشروعك الناشئ.</p>
+<div class="flex justify-between items-center">
+<span class="font-label-lg text-primary">بدءاً من 800 ر.س</span>
+<button class="text-primary font-label-lg flex items-center gap-xs">
+                                    عرض التفاصيل
+                                    <span class="material-symbols-outlined text-[18px]">arrow_back</span>
+</button>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl premium-shadow overflow-hidden group">
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A clean and modern digital marketing agency setup with multiple large monitors showing analytics dashboards and social media feeds. The lighting is cool and professional, creating a high-energy tech atmosphere. The style is Corporate Modern, using a sophisticated mix of deep primary blues, neon green data accents, and bright white backgrounds." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0UcuSP3b_Om88iebzEHQax6ENPESANXvihY8bJIrsvBUD0ykRA1wdQZ0TEb9CUhPQKx9of23IBQEVDOPU-wZbyPKZsDlst4sm5RCVuAa1QuRTs8wdsEE2ALtK_FKmYnB_639yzpV2VpgRBppxr5geY3NmdWRSXQpegG-34ojjKsYhUYBLH2Q4qHKSVshPXwQThd31ZuETonMtAba0hl4trDp0Ti478Q8C_iWNYrsMu63bpldyL5ICsOUXgf5WLY3KWmoborg9cc2p"/>
+</div>
+<div class="p-lg text-right">
+<h3 class="font-headline-md text-headline-md mb-xs">تسويق رقمي</h3>
+<p class="font-body-md text-on-surface-variant mb-md">حملات إعلانية احترافية لزيادة مبيعاتك.</p>
+<div class="flex justify-between items-center">
+<span class="font-label-lg text-primary">بدءاً من 1500 ر.س</span>
+<button class="text-primary font-label-lg flex items-center gap-xs">
+                                    عرض التفاصيل
+                                    <span class="material-symbols-outlined text-[18px]">arrow_back</span>
+</button>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl premium-shadow overflow-hidden group">
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A bright and airy legal office showing a pristine desk with a small wooden gavel and a stack of legal bound books. High-key natural lighting flows into the space, reinforcing a sense of transparency and justice. The aesthetic is extremely clean and high-end, utilizing white, light beige, and deep walnut wood tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfC-pZWtmWPeWsMwly4khDBkeyGvctknTzJ6TV2ZhlzC1eNGtopCQihcwULi_xHQumqZFtpN05CmXKxIlNDLMAK4GQwcHpvMkSAaDHzM4HHd9seZk44l6iN4kEiPbpmYXNBdliyiiIsdo4ZMuyu7O_S4SJ_Qq-wbGxvrN2yk50OyckFOo1N0rebiEoncmY5IQBbkpmcJkWBE6rpRl_TDkFuiM5HMBe9Jg4EE2AwTCan1_7zhaxYHj3OWBe5dtoyPcQUv_PC31hUq4S"/>
+</div>
+<div class="p-lg text-right">
+<h3 class="font-headline-md text-headline-md mb-xs">استشارات قانونية</h3>
+<p class="font-body-md text-on-surface-variant mb-md">تغطية قانونية شاملة وحماية لعقودك.</p>
+<div class="flex justify-between items-center">
+<span class="font-label-lg text-primary">بدءاً من 1000 ر.س</span>
+<button class="text-primary font-label-lg flex items-center gap-xs">
+                                    عرض التفاصيل
+                                    <span class="material-symbols-outlined text-[18px]">arrow_back</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- How It Works -->
+<section class="py-xxl bg-surface-container-low">
+<div class="max-w-[1200px] mx-auto px-4">
+<h2 class="font-headline-lg text-headline-lg text-center text-primary mb-xxl">كيف تعمل منصة زاجل؟</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-xxl relative">
+<!-- Step 1 -->
+<div class="text-center relative z-10">
+<div class="w-20 h-20 bg-primary text-on-primary rounded-full flex items-center justify-center mx-auto mb-lg premium-shadow">
+<span class="material-symbols-outlined text-[32px]">search</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-md">اختر الخدمة</h3>
+<p class="font-body-md text-on-surface-variant">تصفح مئات الخدمات المتاحة أو أضف تفاصيل مشروعك الخاص.</p>
+</div>
+<!-- Step 2 -->
+<div class="text-center relative z-10">
+<div class="w-20 h-20 bg-primary text-on-primary rounded-full flex items-center justify-center mx-auto mb-lg premium-shadow">
+<span class="material-symbols-outlined text-[32px]">chat</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-md">تواصل مع المزود</h3>
+<p class="font-body-md text-on-surface-variant">ناقش التفاصيل مباشرة مع الخبراء واختر العرض الأنسب لك.</p>
+</div>
+<!-- Step 3 -->
+<div class="text-center relative z-10">
+<div class="w-20 h-20 bg-primary text-on-primary rounded-full flex items-center justify-center mx-auto mb-lg premium-shadow">
+<span class="material-symbols-outlined text-[32px]">task_alt</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-md">أنجز مشروعك</h3>
+<p class="font-body-md text-on-surface-variant">استلم عملك بجودة عالية وادفع بكل سهولة وأمان عبر المنصة.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Partners -->
+<section class="py-xl bg-white border-y border-outline-variant">
+<div class="max-w-[1200px] mx-auto px-4 overflow-hidden">
+<div class="flex flex-row flex-wrap justify-center gap-xxl opacity-50 grayscale hover:grayscale-0 transition-all">
+<img alt="Partner" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnQ5V-Q8k6ZS_bjKbyR0kL22_0Wd_fO2XpnmrEfQoSjdAK31BiutO3j_QZE2nTcZQInSXuiraht_IEoHSJQMF4BOv8S7Je5yz9pk-1acy6HbcRQtXrrCL4ZrPViIPx0YWUO_fSkH8DX56hKdmFXCIJTXEPs_ssJIyI_ZZRrcnvQwGtoYJLGTlGz7lSir4DLxXJN_N8yhJwduFc2WVHGZEWdsEmbV2ua2FkvB1-ViZRgabo3r8LPEXIWsaC5BJZM6gAmsb4JxkVz-DF"/>
+<img alt="Partner" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCux-rKj2SZbmpomX4iDKsLPFwOZHZq4MtBfSrvLOZz5YYgHQjej398icC619q351mYW4AMWtkVB8NU_YZYVLVICL0s5Q3fBI2HuHKAhk61l_t1Bv7ltDaAm1807D10SUjPfXWgZhyPG1lXm9GdSngnPF-JCwqIL5IbwtCdlUo5343TwZ1PoHI2NE5nm3i0sseUOPb4Gj342z8xGGZiJxSTxH7eZQ6GU53LiXmPnIAA77N1UBKPQ7d06tXZkmQKB61lFf8TMAjeOFzT"/>
+<img alt="Partner" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsrig6KveB5jX2RvujoTeRZdYOSTsk_Lf0CmMzoeYENXZX-fY8glW-gIRBA7J8ckixLDoTfrY6q7LzeUoWAbhZjQwyfgNaaxdKsnsFmf6UPInD2Wo4OoSx-Jici1TLN4v02BK5nMK47kPwAEy4inBoRwfZ5xLEw1KDldb-aGWmYLBncnW2q7kx5ZZbD3VJ7R-pHcV6XEv9CkYSYns08KnHqCQjdRhv1kck0cpJGXwHwmKvrp7V1V6SXWFdWKVRBc5OqlVqJK0AUM-K"/>
+<img alt="Partner" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgaphmKqO6rudTzDTnr3_v1cWA3P1mJ1i9THmtBV-XCf6btCxHLEmTDPr4-IfeKAfZWcOzMOsoKtnX6Ta1h_4w4Jtslr5-AG7_1JM6FCXcMvc398UVhrB5oQFccl3hCvvgtF_YJeITEAe9XFwZCh76XPYymz2IqfP3Q2H0m0jS1u39wFCg0VZc0NsSmNTskl88qWmss9JU6tWx7d4OpHa6xRZEsNAuiZQtxwMrb-lxpwLOmHPqL4-KRL-buDLhnc2dXWyxLToT9fcQ"/>
+<img alt="Partner" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYehTjpt9xt9TyJI4gDtVJFDfVjpTU9i611ZNVMfAuZCbNszeQIiuBPEh2D9-a0mrRejrDmENvTWRhwS061bAxNVOtyRXygGAQxa9g69xPT0ebgxS7xflktof__lEk21jb-H8FHv_Ov_3ube2V53N9Dm-hCPpDn78O3zyRLoyqh1BCuUvqkR3us1IKB4qN35_V5jEhF1VjZqgrIayAsrGu-wLN9vUhqMP-59fgcFOyYjFWIC5143xIGpvwwP7Mg28HcmMfdzywFF6S"/>
+<img alt="Partner" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7GW56BQ_7XstcohTH2nFFUckVwei6yCWFVsouA0LDM2gZDKVpjD2SRVNFjPwaGr0ytG3RKYAzXlpIIHQcF-lm6Kr59ReIQRH5JLON97adJkXhuBkmxY6RE6eNeqkSF7oqCpeAN5u71LstWKsyEOQLGsqeJUnB5Rthyz77OEPmt6Nk2I-luf5KIfBkVMKCvQgelU6R-SNSaaqcroGdl8mRGR62tNYCSAKCPZ-o02xBAYkr8znqXyd5Kp3tCm5kyoj0XW5DjLBantTE"/>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-xxl">
+<div class="max-w-[1200px] mx-auto px-4">
+<h2 class="font-headline-lg text-headline-lg text-center text-primary mb-xxl">ماذا يقول عملاؤنا</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg">
+<div class="bg-surface-container-lowest p-xl rounded-xl premium-shadow border border-outline-variant">
+<div class="flex flex-row-reverse items-center gap-md mb-md">
+<img alt="Avatar" class="rounded-full w-12 h-12" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0Kurko07Kmx7mSsLm5U8IU0nUEpIACnukEdjauUzr4MgzxL7yZUGK-SLl9bUKc7YRJgBcXFubIYUfRvEj3KLjTISuf5pmqPNcMW502BbR38UJlH2rdAtQYWUKVdNfCKoheGUcawZsgqdrg8iS1nEVig0NlZR9r6KPc0sdf6u8dJIuQQQgjIu7Iyeufysaq1P9IYZqAxC5akTtXjchzAHslg0fE7-Dq52iLjIw4opG8jtpLvOAe0ewQ2kETv4EO0WOG7dHM2ckxaln"/>
+<div class="text-right">
+<h4 class="font-label-lg">أحمد العتيبي</h4>
+<div class="flex text-tertiary-container">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+</div>
+<p class="font-body-md text-on-surface-variant italic">"تجربة رائعة جداً، وجدت مزود خدمة محترف في وقت قياسي. زاجل سهلت علي الكثير من العناء."</p>
+</div>
+<div class="bg-surface-container-lowest p-xl rounded-xl premium-shadow border border-outline-variant">
+<div class="flex flex-row-reverse items-center gap-md mb-md">
+<img alt="Avatar" class="rounded-full w-12 h-12" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnMceNnZJ20YOnCtKYOb41rRDhPiOnjTKK8yDI0XhqzzBFRZg6LrA94v8kE5AE1Dhe43jiL1KiPOziegePhIzU5Ro0E22aQ-RSHydkHa-Yuu6dKWrt6q2FADNZWVWHvpYBWD_uhZ77MY9fOkaqPtj9c3u-wQ_nkQGUp3zJhvqjJa9bc-ISHmBksKkdIpzJecgIjn7M5ANuAJSe6sVPtjHXFo83vdv0FQ-S0LQETovIPlW7c5msFX8bM4IhAPk5RTwnCPY5BC3jghlZ"/>
+<div class="text-right">
+<h4 class="font-label-lg">سارة محمد</h4>
+<div class="flex text-tertiary-container">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 0;">star</span>
+</div>
+</div>
+</div>
+<p class="font-body-md text-on-surface-variant italic">"التواصل مع المصمم كان ممتازاً والجودة فاقت توقعاتي. أنصح الجميع باستخدام المنصة لمشاريعهم."</p>
+</div>
+<div class="bg-surface-container-lowest p-xl rounded-xl premium-shadow border border-outline-variant">
+<div class="flex flex-row-reverse items-center gap-md mb-md">
+<img alt="Avatar" class="rounded-full w-12 h-12" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoHNMZf9btfWQ4EAhfLDbJ-_z4dw6LZvzKUIDZSrg1a0fw63YYduLdIlTlz6bvOwLWPvy92yDSUy609-n4HmEVAq1SrmM479Pp9DUI-pPlgmkm20_jSwqSnrL0dxjyYkzI5X7EMd62L7WynaHGkad_xorG-dnGRUSEREwwP3OYP8Ouw9LRgwuHL_IXxqMm3k9LaLwFKspepuB1LHJHVMMJD36E9klm302JWQs4jzQfkWkOBWuTz9aw0vEV3XeDYMUXlmjykSUb99qR"/>
+<div class="text-right">
+<h4 class="font-label-lg">فهد الحربي</h4>
+<div class="flex text-tertiary-container">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+</div>
+<p class="font-body-md text-on-surface-variant italic">"الدعم الفني وسهولة الدفع هي أكثر ما ميز تجربتي مع زاجل. بالتوفيق وإلى الأمام."</p>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-xxl bg-surface-container-low">
+<div class="max-w-[800px] mx-auto px-4">
+<h2 class="font-headline-lg text-headline-lg text-center text-primary mb-xxl">الأسئلة الشائعة</h2>
+<div class="space-y-md">
+<!-- Accordion Item 1 -->
+<div class="bg-white rounded-xl border border-outline-variant overflow-hidden">
+<button class="w-full flex justify-between items-center p-lg text-right font-headline-md text-primary">
+<span>كيف أبدأ في طلب خدمة؟</span>
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+<!-- Accordion Item 2 -->
+<div class="bg-white rounded-xl border border-outline-variant overflow-hidden">
+<button class="w-full flex justify-between items-center p-lg text-right font-headline-md text-primary">
+<span>هل الدفع عبر المنصة آمن؟</span>
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+<!-- Accordion Item 3 -->
+<div class="bg-white rounded-xl border border-outline-variant overflow-hidden">
+<button class="w-full flex justify-between items-center p-lg text-right font-headline-md text-primary">
+<span>كيف يتم اختيار مزودي الخدمة؟</span>
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+<!-- Accordion Item 4 -->
+<div class="bg-white rounded-xl border border-outline-variant overflow-hidden">
+<button class="w-full flex justify-between items-center p-lg text-right font-headline-md text-primary">
+<span>ماذا أفعل في حال عدم رضاي عن العمل؟</span>
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+<!-- Accordion Item 5 -->
+<div class="bg-white rounded-xl border border-outline-variant overflow-hidden">
+<button class="w-full flex justify-between items-center p-lg text-right font-headline-md text-primary">
+<span>هل يوجد رسوم لفتح حساب؟</span>
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+<!-- Accordion Item 6 -->
+<div class="bg-white rounded-xl border border-outline-variant overflow-hidden">
+<button class="w-full flex justify-between items-center p-lg text-right font-headline-md text-primary">
+<span>كيف يمكنني التواصل مع الدعم الفني؟</span>
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Banner -->
+<section class="py-xxl">
+<div class="max-w-[1200px] mx-auto px-4">
+<div class="cta-gradient rounded-xxl p-xxl text-on-primary text-center">
+<h2 class="font-display-md text-display-md mb-md">هل لديك مشروع؟</h2>
+<p class="font-body-lg text-body-lg mb-xl opacity-90">ابدأ الآن وأضف مشروعك لنصلك بأفضل الكفاءات المتخصصة في المملكة.</p>
+<button class="bg-on-primary text-primary px-xxl py-md rounded-lg font-label-lg hover:scale-105 transition-transform">أضف مشروعك الآن</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-surface-dim full-width border-t border-outline-variant dark:border-outline">
+<div class="flex flex-col w-full py-xxl px-4 md:px-xxl max-w-[1200px] mx-auto text-right">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-xxl mb-xxl">
+<div>
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim mb-4">زاجل</div>
+<p class="font-body-md text-on-surface-variant">منصتك الموثوقة للخدمات الرقمية والاستشارية في المملكة العربية السعودية.</p>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-primary mb-md">روابط سريعة</h4>
+<ul class="space-y-sm">
+<li><a class="text-on-surface-variant font-medium hover:underline decoration-primary" href="#">الرئيسية</a></li>
+<li><a class="text-on-surface-variant font-medium hover:underline decoration-primary" href="#">من نحن</a></li>
+<li><a class="text-on-surface-variant font-medium hover:underline decoration-primary" href="#">الأسئلة الشائعة</a></li>
+<li><a class="text-on-surface-variant font-medium hover:underline decoration-primary" href="#">سياسة الخصوصية</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-primary mb-md">خدماتنا</h4>
+<ul class="space-y-sm">
+<li><a class="text-on-surface-variant font-medium hover:underline decoration-primary" href="#">برمجة وتطوير</a></li>
+<li><a class="text-on-surface-variant font-medium hover:underline decoration-primary" href="#">تصميم وإبداع</a></li>
+<li><a class="text-on-surface-variant font-medium hover:underline decoration-primary" href="#">تسويق ومبيعات</a></li>
+<li><a class="text-on-surface-variant font-medium hover:underline decoration-primary" href="#">استشارات أعمال</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-primary mb-md">تواصل معنا</h4>
+<ul class="space-y-sm">
+<li class="flex items-center gap-sm justify-end text-on-surface-variant font-medium">
+<span>info@zagel.sa</span>
+<span class="material-symbols-outlined text-primary text-[18px]">mail</span>
+</li>
+<li class="flex items-center gap-sm justify-end text-on-surface-variant font-medium">
+<span>+966 500 000 000</span>
+<span class="material-symbols-outlined text-primary text-[18px]">call</span>
+</li>
+<li class="flex items-center gap-sm justify-end text-on-surface-variant font-medium">
+<span>الرياض، المملكة العربية السعودية</span>
+<span class="material-symbols-outlined text-primary text-[18px]">location_on</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="border-t border-outline-variant pt-xl flex flex-col md:flex-row-reverse justify-between items-center gap-md">
+<p class="font-body-md text-on-surface-variant">© 2024 زاجل. جميع الحقوق محفوظة. منصة الخدمات الموثوقة.</p>
+<div class="flex gap-lg">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">link</span></a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

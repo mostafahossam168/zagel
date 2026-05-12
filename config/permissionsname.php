@@ -24,6 +24,11 @@ return [
         // 'reviews' => ['read', 'update'],
         // 'actives' => ['read', 'delete'],
         // 'contacts' => ['read', 'delete'],
+        'services'             => $map,
+        'testimonials'         => $map,
+        'project_submissions'  => ['read', 'update', 'delete'],
+        'notifications'        => ['create', 'read', 'delete'],
+        'provider_listings'    => ['read', 'update', 'delete'],
         'statistics_home' => ['read'],
     ],
 ];

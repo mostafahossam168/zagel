@@ -89,12 +89,62 @@
                 </a>
             </li>
         @endcan
+        @can('read_services')
+            <li class="list-item {{ request()->routeIs('dashboard.services.*') ? 'active' : '' }}">
+                <a href="{{ route('dashboard.services.index') }}">
+                    <div>
+                        <i class="fa-solid fa-briefcase"></i>
+                        الخدمات
+                    </div>
+                </a>
+            </li>
+        @endcan
+        @can('read_testimonials')
+            <li class="list-item {{ request()->routeIs('dashboard.testimonials.*') ? 'active' : '' }}">
+                <a href="{{ route('dashboard.testimonials.index') }}">
+                    <div>
+                        <i class="fa-solid fa-star"></i>
+                        الشهادات
+                    </div>
+                </a>
+            </li>
+        @endcan
         @can('read_contacts')
             <li class="list-item {{ request()->routeIs('dashboard.contacts.*') ? 'active' : '' }}">
                 <a href="{{ route('dashboard.contacts.index') }}">
                     <div>
                         <i class="fa-solid fa-envelope"></i>
                         الرسائل
+                    </div>
+                </a>
+            </li>
+        @endcan
+        @can('read_project_submissions')
+            <li class="list-item {{ request()->routeIs('dashboard.project-submissions.*') ? 'active' : '' }}">
+                <a href="{{ route('dashboard.project-submissions.index') }}">
+                    <div>
+                        <i class="fa-solid fa-lightbulb"></i>
+                        المشاريع المقدمة
+                    </div>
+                </a>
+            </li>
+        @endcan
+        @can('read_notifications')
+            <li class="list-item {{ request()->routeIs('dashboard.notifications.*') ? 'active' : '' }}">
+                <a href="{{ route('dashboard.notifications.index') }}">
+                    <div>
+                        <i class="fa-solid fa-bell"></i>
+                        الإشعارات
+                    </div>
+                </a>
+            </li>
+        @endcan
+        @can('read_provider_listings')
+            <li class="list-item {{ request()->routeIs('dashboard.provider-listings.*') ? 'active' : '' }}">
+                <a href="{{ route('dashboard.provider-listings.index') }}">
+                    <div>
+                        <i class="fa-solid fa-user-tie"></i>
+                        خدمات المزودين
                     </div>
                 </a>
             </li>

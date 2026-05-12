@@ -8,6 +8,7 @@ use App\Enums\StatusUser;
 use App\Enums\UserType;
 use Database\Factories\UserFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Spatie\Permission\Traits\HasRoles;
@@ -79,5 +80,10 @@ class User extends Authenticatable
     public function scopeInActive($query)
     {
         return $query->where('status', StatusUser::INACTIVE->value);
+    }
+
+    public function providerListings(): HasMany
+    {
+        return $this->hasMany(ProviderListing::class);
     }
 }
