@@ -7,6 +7,76 @@
             <div class="large">لوحة التحكم</div>
         </div>
 
+        <div class="row g-3 mb-4">
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="box-statistic blue">
+                    <div class="right-side">
+                        <h6 class="name">زوار اليوم</h6>
+                        <h3 class="amount">
+                            <span class="num-stat" data-goal="{{ $visitorStats['today'] ?? 0 }}">0</span>
+                        </h3>
+                        <span class="link-view">مشاهدات: {{ number_format($pageViewStats['today'] ?? 0) }}</span>
+                    </div>
+                    <div class="left-side">
+                        <div class="icon-holder blue">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="box-statistic green">
+                    <div class="right-side">
+                        <h6 class="name">زوار الأسبوع</h6>
+                        <h3 class="amount">
+                            <span class="num-stat" data-goal="{{ $visitorStats['week'] ?? 0 }}">0</span>
+                        </h3>
+                        <span class="link-view">مشاهدات: {{ number_format($pageViewStats['week'] ?? 0) }}</span>
+                    </div>
+                    <div class="left-side">
+                        <div class="icon-holder green">
+                            <i class="fa-solid fa-calendar-week"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="box-statistic purple">
+                    <div class="right-side">
+                        <h6 class="name">زوار الشهر</h6>
+                        <h3 class="amount">
+                            <span class="num-stat" data-goal="{{ $visitorStats['month'] ?? 0 }}">0</span>
+                        </h3>
+                        <span class="link-view">مشاهدات: {{ number_format($pageViewStats['month'] ?? 0) }}</span>
+                    </div>
+                    <div class="left-side">
+                        <div class="icon-holder yellow">
+                            <i class="fa-solid fa-calendar-days"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="box-statistic yellow">
+                    <div class="right-side">
+                        <h6 class="name">زوار السنة</h6>
+                        <h3 class="amount">
+                            <span class="num-stat" data-goal="{{ $visitorStats['year'] ?? 0 }}">0</span>
+                        </h3>
+                        <span class="link-view">مشاهدات: {{ number_format($pageViewStats['year'] ?? 0) }}</span>
+                    </div>
+                    <div class="left-side">
+                        <div class="icon-holder">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="row g-3">
 
             @can('read_admins')

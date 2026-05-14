@@ -15,10 +15,8 @@ class HomeController extends Controller
         $services      = Service::active()->orderBy('sort_order')->limit(6)->get();
         $servicesTotal = Service::active()->count();
         $testimonials  = Testimonial::where('status', 'active')->limit(6)->get();
-        // dd($testimonials);
         $partners      = Partner::all();
         $faqs          = Faq::where('status', 'active')->take(6)->get();
-
         return view('front.home', compact('services', 'servicesTotal', 'testimonials', 'partners', 'faqs'));
     }
 }

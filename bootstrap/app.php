@@ -17,6 +17,8 @@ return Application::configure(basePath: dirname(__DIR__))
         }
     )
     ->withMiddleware(function (Middleware $middleware): void {
+        $middleware->appendToGroup('web', App\Http\Middleware\TrackSiteVisit::class);
+
         $middleware->alias([
             'check_admin' => App\Http\Middleware\CheckAdmin::class,
             'guest_admin' => App\Http\Middleware\GuestAdmin::class,

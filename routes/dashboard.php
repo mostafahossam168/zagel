@@ -5,6 +5,7 @@ use App\Http\Controllers\Dashboard\AuthController;
 use App\Http\Controllers\Dashboard\CategoryController;
 use App\Http\Controllers\Dashboard\ContactController;
 use App\Http\Controllers\Dashboard\FaqController;
+use App\Http\Controllers\Dashboard\HomeController;
 use App\Http\Controllers\Dashboard\NotificationController;
 use App\Http\Controllers\Dashboard\PageController;
 use App\Http\Controllers\Dashboard\PartnerController;
@@ -27,9 +28,7 @@ Route::middleware('guest_admin')->group(function () {
 });
 Route::post('logout', [AuthController::class, 'logout'])->name('logout');
 Route::group(['middleware' => 'check_admin'], function () {
-    Route::get('/home', function () {
-        return view('dashboard.home');
-    })->name('home');
+    Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 
     Route::get('profile', [ProfileController::class, 'index'])->name('profile.index');
